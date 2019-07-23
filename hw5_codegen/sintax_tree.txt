@@ -1,0 +1,2575 @@
+     0  *ast.File {
+     1  .  Package: api.go:1:1
+     2  .  Name: *ast.Ident {
+     3  .  .  NamePos: api.go:1:9
+     4  .  .  Name: "main"
+     5  .  }
+     6  .  Decls: []ast.Decl (len = 17) {
+     7  .  .  0: *ast.GenDecl {
+     8  .  .  .  TokPos: api.go:3:1
+     9  .  .  .  Tok: import
+    10  .  .  .  Lparen: api.go:3:8
+    11  .  .  .  Specs: []ast.Spec (len = 4) {
+    12  .  .  .  .  0: *ast.ImportSpec {
+    13  .  .  .  .  .  Path: *ast.BasicLit {
+    14  .  .  .  .  .  .  ValuePos: api.go:4:2
+    15  .  .  .  .  .  .  Kind: STRING
+    16  .  .  .  .  .  .  Value: "\"context\""
+    17  .  .  .  .  .  }
+    18  .  .  .  .  .  EndPos: -
+    19  .  .  .  .  }
+    20  .  .  .  .  1: *ast.ImportSpec {
+    21  .  .  .  .  .  Path: *ast.BasicLit {
+    22  .  .  .  .  .  .  ValuePos: api.go:5:2
+    23  .  .  .  .  .  .  Kind: STRING
+    24  .  .  .  .  .  .  Value: "\"fmt\""
+    25  .  .  .  .  .  }
+    26  .  .  .  .  .  EndPos: -
+    27  .  .  .  .  }
+    28  .  .  .  .  2: *ast.ImportSpec {
+    29  .  .  .  .  .  Path: *ast.BasicLit {
+    30  .  .  .  .  .  .  ValuePos: api.go:6:2
+    31  .  .  .  .  .  .  Kind: STRING
+    32  .  .  .  .  .  .  Value: "\"net/http\""
+    33  .  .  .  .  .  }
+    34  .  .  .  .  .  EndPos: -
+    35  .  .  .  .  }
+    36  .  .  .  .  3: *ast.ImportSpec {
+    37  .  .  .  .  .  Path: *ast.BasicLit {
+    38  .  .  .  .  .  .  ValuePos: api.go:7:2
+    39  .  .  .  .  .  .  Kind: STRING
+    40  .  .  .  .  .  .  Value: "\"sync\""
+    41  .  .  .  .  .  }
+    42  .  .  .  .  .  EndPos: -
+    43  .  .  .  .  }
+    44  .  .  .  }
+    45  .  .  .  Rparen: api.go:8:1
+    46  .  .  }
+    47  .  .  1: *ast.GenDecl {
+    48  .  .  .  Doc: *ast.CommentGroup {
+    49  .  .  .  .  List: []*ast.Comment (len = 2) {
+    50  .  .  .  .  .  0: *ast.Comment {
+    51  .  .  .  .  .  .  Slash: api.go:10:1
+    52  .  .  .  .  .  .  Text: "// вы можете использовать ApiError в коде, который получается в результате генерации"
+    53  .  .  .  .  .  }
+    54  .  .  .  .  .  1: *ast.Comment {
+    55  .  .  .  .  .  .  Slash: api.go:11:1
+    56  .  .  .  .  .  .  Text: "// считаем что это какая-то общеизвестная структура"
+    57  .  .  .  .  .  }
+    58  .  .  .  .  }
+    59  .  .  .  }
+    60  .  .  .  TokPos: api.go:12:1
+    61  .  .  .  Tok: type
+    62  .  .  .  Lparen: -
+    63  .  .  .  Specs: []ast.Spec (len = 1) {
+    64  .  .  .  .  0: *ast.TypeSpec {
+    65  .  .  .  .  .  Name: *ast.Ident {
+    66  .  .  .  .  .  .  NamePos: api.go:12:6
+    67  .  .  .  .  .  .  Name: "ApiError"
+    68  .  .  .  .  .  .  Obj: *ast.Object {
+    69  .  .  .  .  .  .  .  Kind: type
+    70  .  .  .  .  .  .  .  Name: "ApiError"
+    71  .  .  .  .  .  .  .  Decl: *(obj @ 64)
+    72  .  .  .  .  .  .  }
+    73  .  .  .  .  .  }
+    74  .  .  .  .  .  Assign: -
+    75  .  .  .  .  .  Type: *ast.StructType {
+    76  .  .  .  .  .  .  Struct: api.go:12:15
+    77  .  .  .  .  .  .  Fields: *ast.FieldList {
+    78  .  .  .  .  .  .  .  Opening: api.go:12:22
+    79  .  .  .  .  .  .  .  List: []*ast.Field (len = 2) {
+    80  .  .  .  .  .  .  .  .  0: *ast.Field {
+    81  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+    82  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+    83  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:13:2
+    84  .  .  .  .  .  .  .  .  .  .  .  Name: "HTTPStatus"
+    85  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+    86  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+    87  .  .  .  .  .  .  .  .  .  .  .  .  Name: "HTTPStatus"
+    88  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 80)
+    89  .  .  .  .  .  .  .  .  .  .  .  }
+    90  .  .  .  .  .  .  .  .  .  .  }
+    91  .  .  .  .  .  .  .  .  .  }
+    92  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+    93  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:13:13
+    94  .  .  .  .  .  .  .  .  .  .  Name: "int"
+    95  .  .  .  .  .  .  .  .  .  }
+    96  .  .  .  .  .  .  .  .  }
+    97  .  .  .  .  .  .  .  .  1: *ast.Field {
+    98  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+    99  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   100  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:14:2
+   101  .  .  .  .  .  .  .  .  .  .  .  Name: "Err"
+   102  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   103  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   104  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Err"
+   105  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 97)
+   106  .  .  .  .  .  .  .  .  .  .  .  }
+   107  .  .  .  .  .  .  .  .  .  .  }
+   108  .  .  .  .  .  .  .  .  .  }
+   109  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   110  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:14:13
+   111  .  .  .  .  .  .  .  .  .  .  Name: "error"
+   112  .  .  .  .  .  .  .  .  .  }
+   113  .  .  .  .  .  .  .  .  }
+   114  .  .  .  .  .  .  .  }
+   115  .  .  .  .  .  .  .  Closing: api.go:15:1
+   116  .  .  .  .  .  .  }
+   117  .  .  .  .  .  .  Incomplete: false
+   118  .  .  .  .  .  }
+   119  .  .  .  .  }
+   120  .  .  .  }
+   121  .  .  .  Rparen: -
+   122  .  .  }
+   123  .  .  2: *ast.FuncDecl {
+   124  .  .  .  Recv: *ast.FieldList {
+   125  .  .  .  .  Opening: api.go:17:6
+   126  .  .  .  .  List: []*ast.Field (len = 1) {
+   127  .  .  .  .  .  0: *ast.Field {
+   128  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   129  .  .  .  .  .  .  .  0: *ast.Ident {
+   130  .  .  .  .  .  .  .  .  NamePos: api.go:17:7
+   131  .  .  .  .  .  .  .  .  Name: "ae"
+   132  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   133  .  .  .  .  .  .  .  .  .  Kind: var
+   134  .  .  .  .  .  .  .  .  .  Name: "ae"
+   135  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 127)
+   136  .  .  .  .  .  .  .  .  }
+   137  .  .  .  .  .  .  .  }
+   138  .  .  .  .  .  .  }
+   139  .  .  .  .  .  .  Type: *ast.Ident {
+   140  .  .  .  .  .  .  .  NamePos: api.go:17:10
+   141  .  .  .  .  .  .  .  Name: "ApiError"
+   142  .  .  .  .  .  .  .  Obj: *(obj @ 68)
+   143  .  .  .  .  .  .  }
+   144  .  .  .  .  .  }
+   145  .  .  .  .  }
+   146  .  .  .  .  Closing: api.go:17:18
+   147  .  .  .  }
+   148  .  .  .  Name: *ast.Ident {
+   149  .  .  .  .  NamePos: api.go:17:20
+   150  .  .  .  .  Name: "Error"
+   151  .  .  .  }
+   152  .  .  .  Type: *ast.FuncType {
+   153  .  .  .  .  Func: api.go:17:1
+   154  .  .  .  .  Params: *ast.FieldList {
+   155  .  .  .  .  .  Opening: api.go:17:25
+   156  .  .  .  .  .  Closing: api.go:17:26
+   157  .  .  .  .  }
+   158  .  .  .  .  Results: *ast.FieldList {
+   159  .  .  .  .  .  Opening: -
+   160  .  .  .  .  .  List: []*ast.Field (len = 1) {
+   161  .  .  .  .  .  .  0: *ast.Field {
+   162  .  .  .  .  .  .  .  Type: *ast.Ident {
+   163  .  .  .  .  .  .  .  .  NamePos: api.go:17:28
+   164  .  .  .  .  .  .  .  .  Name: "string"
+   165  .  .  .  .  .  .  .  }
+   166  .  .  .  .  .  .  }
+   167  .  .  .  .  .  }
+   168  .  .  .  .  .  Closing: -
+   169  .  .  .  .  }
+   170  .  .  .  }
+   171  .  .  .  Body: *ast.BlockStmt {
+   172  .  .  .  .  Lbrace: api.go:17:35
+   173  .  .  .  .  List: []ast.Stmt (len = 1) {
+   174  .  .  .  .  .  0: *ast.ReturnStmt {
+   175  .  .  .  .  .  .  Return: api.go:18:2
+   176  .  .  .  .  .  .  Results: []ast.Expr (len = 1) {
+   177  .  .  .  .  .  .  .  0: *ast.CallExpr {
+   178  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   179  .  .  .  .  .  .  .  .  .  X: *ast.SelectorExpr {
+   180  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   181  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:18:9
+   182  .  .  .  .  .  .  .  .  .  .  .  Name: "ae"
+   183  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 132)
+   184  .  .  .  .  .  .  .  .  .  .  }
+   185  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   186  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:18:12
+   187  .  .  .  .  .  .  .  .  .  .  .  Name: "Err"
+   188  .  .  .  .  .  .  .  .  .  .  }
+   189  .  .  .  .  .  .  .  .  .  }
+   190  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   191  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:18:16
+   192  .  .  .  .  .  .  .  .  .  .  Name: "Error"
+   193  .  .  .  .  .  .  .  .  .  }
+   194  .  .  .  .  .  .  .  .  }
+   195  .  .  .  .  .  .  .  .  Lparen: api.go:18:21
+   196  .  .  .  .  .  .  .  .  Ellipsis: -
+   197  .  .  .  .  .  .  .  .  Rparen: api.go:18:22
+   198  .  .  .  .  .  .  .  }
+   199  .  .  .  .  .  .  }
+   200  .  .  .  .  .  }
+   201  .  .  .  .  }
+   202  .  .  .  .  Rbrace: api.go:19:1
+   203  .  .  .  }
+   204  .  .  }
+   205  .  .  3: *ast.GenDecl {
+   206  .  .  .  TokPos: api.go:23:1
+   207  .  .  .  Tok: const
+   208  .  .  .  Lparen: api.go:23:7
+   209  .  .  .  Specs: []ast.Spec (len = 3) {
+   210  .  .  .  .  0: *ast.ValueSpec {
+   211  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   212  .  .  .  .  .  .  0: *ast.Ident {
+   213  .  .  .  .  .  .  .  NamePos: api.go:24:2
+   214  .  .  .  .  .  .  .  Name: "statusUser"
+   215  .  .  .  .  .  .  .  Obj: *ast.Object {
+   216  .  .  .  .  .  .  .  .  Kind: const
+   217  .  .  .  .  .  .  .  .  Name: "statusUser"
+   218  .  .  .  .  .  .  .  .  Decl: *(obj @ 210)
+   219  .  .  .  .  .  .  .  .  Data: 0
+   220  .  .  .  .  .  .  .  }
+   221  .  .  .  .  .  .  }
+   222  .  .  .  .  .  }
+   223  .  .  .  .  .  Values: []ast.Expr (len = 1) {
+   224  .  .  .  .  .  .  0: *ast.BasicLit {
+   225  .  .  .  .  .  .  .  ValuePos: api.go:24:20
+   226  .  .  .  .  .  .  .  Kind: INT
+   227  .  .  .  .  .  .  .  Value: "0"
+   228  .  .  .  .  .  .  }
+   229  .  .  .  .  .  }
+   230  .  .  .  .  }
+   231  .  .  .  .  1: *ast.ValueSpec {
+   232  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   233  .  .  .  .  .  .  0: *ast.Ident {
+   234  .  .  .  .  .  .  .  NamePos: api.go:25:2
+   235  .  .  .  .  .  .  .  Name: "statusModerator"
+   236  .  .  .  .  .  .  .  Obj: *ast.Object {
+   237  .  .  .  .  .  .  .  .  Kind: const
+   238  .  .  .  .  .  .  .  .  Name: "statusModerator"
+   239  .  .  .  .  .  .  .  .  Decl: *(obj @ 231)
+   240  .  .  .  .  .  .  .  .  Data: 1
+   241  .  .  .  .  .  .  .  }
+   242  .  .  .  .  .  .  }
+   243  .  .  .  .  .  }
+   244  .  .  .  .  .  Values: []ast.Expr (len = 1) {
+   245  .  .  .  .  .  .  0: *ast.BasicLit {
+   246  .  .  .  .  .  .  .  ValuePos: api.go:25:20
+   247  .  .  .  .  .  .  .  Kind: INT
+   248  .  .  .  .  .  .  .  Value: "10"
+   249  .  .  .  .  .  .  }
+   250  .  .  .  .  .  }
+   251  .  .  .  .  }
+   252  .  .  .  .  2: *ast.ValueSpec {
+   253  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   254  .  .  .  .  .  .  0: *ast.Ident {
+   255  .  .  .  .  .  .  .  NamePos: api.go:26:2
+   256  .  .  .  .  .  .  .  Name: "statusAdmin"
+   257  .  .  .  .  .  .  .  Obj: *ast.Object {
+   258  .  .  .  .  .  .  .  .  Kind: const
+   259  .  .  .  .  .  .  .  .  Name: "statusAdmin"
+   260  .  .  .  .  .  .  .  .  Decl: *(obj @ 252)
+   261  .  .  .  .  .  .  .  .  Data: 2
+   262  .  .  .  .  .  .  .  }
+   263  .  .  .  .  .  .  }
+   264  .  .  .  .  .  }
+   265  .  .  .  .  .  Values: []ast.Expr (len = 1) {
+   266  .  .  .  .  .  .  0: *ast.BasicLit {
+   267  .  .  .  .  .  .  .  ValuePos: api.go:26:20
+   268  .  .  .  .  .  .  .  Kind: INT
+   269  .  .  .  .  .  .  .  Value: "20"
+   270  .  .  .  .  .  .  }
+   271  .  .  .  .  .  }
+   272  .  .  .  .  }
+   273  .  .  .  }
+   274  .  .  .  Rparen: api.go:27:1
+   275  .  .  }
+   276  .  .  4: *ast.GenDecl {
+   277  .  .  .  TokPos: api.go:29:1
+   278  .  .  .  Tok: type
+   279  .  .  .  Lparen: -
+   280  .  .  .  Specs: []ast.Spec (len = 1) {
+   281  .  .  .  .  0: *ast.TypeSpec {
+   282  .  .  .  .  .  Name: *ast.Ident {
+   283  .  .  .  .  .  .  NamePos: api.go:29:6
+   284  .  .  .  .  .  .  Name: "MyApi"
+   285  .  .  .  .  .  .  Obj: *ast.Object {
+   286  .  .  .  .  .  .  .  Kind: type
+   287  .  .  .  .  .  .  .  Name: "MyApi"
+   288  .  .  .  .  .  .  .  Decl: *(obj @ 281)
+   289  .  .  .  .  .  .  }
+   290  .  .  .  .  .  }
+   291  .  .  .  .  .  Assign: -
+   292  .  .  .  .  .  Type: *ast.StructType {
+   293  .  .  .  .  .  .  Struct: api.go:29:12
+   294  .  .  .  .  .  .  Fields: *ast.FieldList {
+   295  .  .  .  .  .  .  .  Opening: api.go:29:19
+   296  .  .  .  .  .  .  .  List: []*ast.Field (len = 4) {
+   297  .  .  .  .  .  .  .  .  0: *ast.Field {
+   298  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   299  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   300  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:30:2
+   301  .  .  .  .  .  .  .  .  .  .  .  Name: "statuses"
+   302  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   303  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   304  .  .  .  .  .  .  .  .  .  .  .  .  Name: "statuses"
+   305  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 297)
+   306  .  .  .  .  .  .  .  .  .  .  .  }
+   307  .  .  .  .  .  .  .  .  .  .  }
+   308  .  .  .  .  .  .  .  .  .  }
+   309  .  .  .  .  .  .  .  .  .  Type: *ast.MapType {
+   310  .  .  .  .  .  .  .  .  .  .  Map: api.go:30:11
+   311  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+   312  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:30:15
+   313  .  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   314  .  .  .  .  .  .  .  .  .  .  }
+   315  .  .  .  .  .  .  .  .  .  .  Value: *ast.Ident {
+   316  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:30:22
+   317  .  .  .  .  .  .  .  .  .  .  .  Name: "int"
+   318  .  .  .  .  .  .  .  .  .  .  }
+   319  .  .  .  .  .  .  .  .  .  }
+   320  .  .  .  .  .  .  .  .  }
+   321  .  .  .  .  .  .  .  .  1: *ast.Field {
+   322  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   323  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   324  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:31:2
+   325  .  .  .  .  .  .  .  .  .  .  .  Name: "users"
+   326  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   327  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   328  .  .  .  .  .  .  .  .  .  .  .  .  Name: "users"
+   329  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 321)
+   330  .  .  .  .  .  .  .  .  .  .  .  }
+   331  .  .  .  .  .  .  .  .  .  .  }
+   332  .  .  .  .  .  .  .  .  .  }
+   333  .  .  .  .  .  .  .  .  .  Type: *ast.MapType {
+   334  .  .  .  .  .  .  .  .  .  .  Map: api.go:31:11
+   335  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+   336  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:31:15
+   337  .  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   338  .  .  .  .  .  .  .  .  .  .  }
+   339  .  .  .  .  .  .  .  .  .  .  Value: *ast.StarExpr {
+   340  .  .  .  .  .  .  .  .  .  .  .  Star: api.go:31:22
+   341  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   342  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:31:23
+   343  .  .  .  .  .  .  .  .  .  .  .  .  Name: "User"
+   344  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   345  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: type
+   346  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "User"
+   347  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *ast.TypeSpec {
+   348  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: *ast.Ident {
+   349  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:67:6
+   350  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "User"
+   351  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 344)
+   352  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   353  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Assign: -
+   354  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.StructType {
+   355  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Struct: api.go:67:11
+   356  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Fields: *ast.FieldList {
+   357  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Opening: api.go:67:18
+   358  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  List: []*ast.Field (len = 4) {
+   359  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Field {
+   360  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   361  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   362  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:68:2
+   363  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+   364  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   365  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   366  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+   367  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 359)
+   368  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   369  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   370  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   371  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   372  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:68:11
+   373  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "uint64"
+   374  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   375  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+   376  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:68:18
+   377  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   378  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "`json:\"id\"`"
+   379  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   380  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   381  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.Field {
+   382  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   383  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   384  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:69:2
+   385  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+   386  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   387  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   388  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+   389  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 381)
+   390  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   391  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   392  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   393  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   394  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:69:11
+   395  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   396  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   397  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+   398  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:69:18
+   399  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   400  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "`json:\"login\"`"
+   401  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   402  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   403  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  2: *ast.Field {
+   404  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   405  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   406  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:70:2
+   407  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "FullName"
+   408  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   409  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   410  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "FullName"
+   411  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 403)
+   412  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   413  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   414  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   415  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   416  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:70:11
+   417  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   418  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   419  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+   420  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:70:18
+   421  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   422  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "`json:\"full_name\"`"
+   423  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   424  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   425  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  3: *ast.Field {
+   426  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   427  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   428  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:71:2
+   429  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Status"
+   430  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   431  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   432  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Status"
+   433  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 425)
+   434  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   435  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   436  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   437  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   438  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:71:11
+   439  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "int"
+   440  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   441  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+   442  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:71:18
+   443  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   444  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "`json:\"status\"`"
+   445  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   446  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   447  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   448  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Closing: api.go:72:1
+   449  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   450  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Incomplete: false
+   451  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   452  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   453  .  .  .  .  .  .  .  .  .  .  .  .  }
+   454  .  .  .  .  .  .  .  .  .  .  .  }
+   455  .  .  .  .  .  .  .  .  .  .  }
+   456  .  .  .  .  .  .  .  .  .  }
+   457  .  .  .  .  .  .  .  .  }
+   458  .  .  .  .  .  .  .  .  2: *ast.Field {
+   459  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   460  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   461  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:32:2
+   462  .  .  .  .  .  .  .  .  .  .  .  Name: "nextID"
+   463  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   464  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   465  .  .  .  .  .  .  .  .  .  .  .  .  Name: "nextID"
+   466  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 458)
+   467  .  .  .  .  .  .  .  .  .  .  .  }
+   468  .  .  .  .  .  .  .  .  .  .  }
+   469  .  .  .  .  .  .  .  .  .  }
+   470  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   471  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:32:11
+   472  .  .  .  .  .  .  .  .  .  .  Name: "uint64"
+   473  .  .  .  .  .  .  .  .  .  }
+   474  .  .  .  .  .  .  .  .  }
+   475  .  .  .  .  .  .  .  .  3: *ast.Field {
+   476  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   477  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   478  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:33:2
+   479  .  .  .  .  .  .  .  .  .  .  .  Name: "mu"
+   480  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   481  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   482  .  .  .  .  .  .  .  .  .  .  .  .  Name: "mu"
+   483  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 475)
+   484  .  .  .  .  .  .  .  .  .  .  .  }
+   485  .  .  .  .  .  .  .  .  .  .  }
+   486  .  .  .  .  .  .  .  .  .  }
+   487  .  .  .  .  .  .  .  .  .  Type: *ast.StarExpr {
+   488  .  .  .  .  .  .  .  .  .  .  Star: api.go:33:11
+   489  .  .  .  .  .  .  .  .  .  .  X: *ast.SelectorExpr {
+   490  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   491  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:33:12
+   492  .  .  .  .  .  .  .  .  .  .  .  .  Name: "sync"
+   493  .  .  .  .  .  .  .  .  .  .  .  }
+   494  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   495  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:33:17
+   496  .  .  .  .  .  .  .  .  .  .  .  .  Name: "RWMutex"
+   497  .  .  .  .  .  .  .  .  .  .  .  }
+   498  .  .  .  .  .  .  .  .  .  .  }
+   499  .  .  .  .  .  .  .  .  .  }
+   500  .  .  .  .  .  .  .  .  }
+   501  .  .  .  .  .  .  .  }
+   502  .  .  .  .  .  .  .  Closing: api.go:34:1
+   503  .  .  .  .  .  .  }
+   504  .  .  .  .  .  .  Incomplete: false
+   505  .  .  .  .  .  }
+   506  .  .  .  .  }
+   507  .  .  .  }
+   508  .  .  .  Rparen: -
+   509  .  .  }
+   510  .  .  5: *ast.FuncDecl {
+   511  .  .  .  Name: *ast.Ident {
+   512  .  .  .  .  NamePos: api.go:36:6
+   513  .  .  .  .  Name: "NewMyApi"
+   514  .  .  .  .  Obj: *ast.Object {
+   515  .  .  .  .  .  Kind: func
+   516  .  .  .  .  .  Name: "NewMyApi"
+   517  .  .  .  .  .  Decl: *(obj @ 510)
+   518  .  .  .  .  }
+   519  .  .  .  }
+   520  .  .  .  Type: *ast.FuncType {
+   521  .  .  .  .  Func: api.go:36:1
+   522  .  .  .  .  Params: *ast.FieldList {
+   523  .  .  .  .  .  Opening: api.go:36:14
+   524  .  .  .  .  .  Closing: api.go:36:15
+   525  .  .  .  .  }
+   526  .  .  .  .  Results: *ast.FieldList {
+   527  .  .  .  .  .  Opening: -
+   528  .  .  .  .  .  List: []*ast.Field (len = 1) {
+   529  .  .  .  .  .  .  0: *ast.Field {
+   530  .  .  .  .  .  .  .  Type: *ast.StarExpr {
+   531  .  .  .  .  .  .  .  .  Star: api.go:36:17
+   532  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   533  .  .  .  .  .  .  .  .  .  NamePos: api.go:36:18
+   534  .  .  .  .  .  .  .  .  .  Name: "MyApi"
+   535  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 285)
+   536  .  .  .  .  .  .  .  .  }
+   537  .  .  .  .  .  .  .  }
+   538  .  .  .  .  .  .  }
+   539  .  .  .  .  .  }
+   540  .  .  .  .  .  Closing: -
+   541  .  .  .  .  }
+   542  .  .  .  }
+   543  .  .  .  Body: *ast.BlockStmt {
+   544  .  .  .  .  Lbrace: api.go:36:24
+   545  .  .  .  .  List: []ast.Stmt (len = 1) {
+   546  .  .  .  .  .  0: *ast.ReturnStmt {
+   547  .  .  .  .  .  .  Return: api.go:37:2
+   548  .  .  .  .  .  .  Results: []ast.Expr (len = 1) {
+   549  .  .  .  .  .  .  .  0: *ast.UnaryExpr {
+   550  .  .  .  .  .  .  .  .  OpPos: api.go:37:9
+   551  .  .  .  .  .  .  .  .  Op: &
+   552  .  .  .  .  .  .  .  .  X: *ast.CompositeLit {
+   553  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   554  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:37:10
+   555  .  .  .  .  .  .  .  .  .  .  Name: "MyApi"
+   556  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 285)
+   557  .  .  .  .  .  .  .  .  .  }
+   558  .  .  .  .  .  .  .  .  .  Lbrace: api.go:37:15
+   559  .  .  .  .  .  .  .  .  .  Elts: []ast.Expr (len = 4) {
+   560  .  .  .  .  .  .  .  .  .  .  0: *ast.KeyValueExpr {
+   561  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+   562  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:38:3
+   563  .  .  .  .  .  .  .  .  .  .  .  .  Name: "statuses"
+   564  .  .  .  .  .  .  .  .  .  .  .  }
+   565  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:38:11
+   566  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.CompositeLit {
+   567  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.MapType {
+   568  .  .  .  .  .  .  .  .  .  .  .  .  .  Map: api.go:38:13
+   569  .  .  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+   570  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:38:17
+   571  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   572  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   573  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.Ident {
+   574  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:38:24
+   575  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "int"
+   576  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   577  .  .  .  .  .  .  .  .  .  .  .  .  }
+   578  .  .  .  .  .  .  .  .  .  .  .  .  Lbrace: api.go:38:27
+   579  .  .  .  .  .  .  .  .  .  .  .  .  Elts: []ast.Expr (len = 3) {
+   580  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.KeyValueExpr {
+   581  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.BasicLit {
+   582  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:39:4
+   583  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   584  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"user\""
+   585  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   586  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:39:10
+   587  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.BasicLit {
+   588  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:39:17
+   589  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   590  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "0"
+   591  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   592  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   593  .  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.KeyValueExpr {
+   594  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.BasicLit {
+   595  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:40:4
+   596  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   597  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"moderator\""
+   598  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   599  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:40:15
+   600  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.BasicLit {
+   601  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:40:17
+   602  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   603  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "10"
+   604  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   605  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   606  .  .  .  .  .  .  .  .  .  .  .  .  .  2: *ast.KeyValueExpr {
+   607  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.BasicLit {
+   608  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:41:4
+   609  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   610  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"admin\""
+   611  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   612  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:41:11
+   613  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.BasicLit {
+   614  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:41:17
+   615  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   616  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "20"
+   617  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   618  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   619  .  .  .  .  .  .  .  .  .  .  .  .  }
+   620  .  .  .  .  .  .  .  .  .  .  .  .  Rbrace: api.go:42:3
+   621  .  .  .  .  .  .  .  .  .  .  .  .  Incomplete: false
+   622  .  .  .  .  .  .  .  .  .  .  .  }
+   623  .  .  .  .  .  .  .  .  .  .  }
+   624  .  .  .  .  .  .  .  .  .  .  1: *ast.KeyValueExpr {
+   625  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+   626  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:43:3
+   627  .  .  .  .  .  .  .  .  .  .  .  .  Name: "users"
+   628  .  .  .  .  .  .  .  .  .  .  .  }
+   629  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:43:8
+   630  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.CompositeLit {
+   631  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.MapType {
+   632  .  .  .  .  .  .  .  .  .  .  .  .  .  Map: api.go:43:10
+   633  .  .  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+   634  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:43:14
+   635  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   636  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   637  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.StarExpr {
+   638  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Star: api.go:43:21
+   639  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   640  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:43:22
+   641  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "User"
+   642  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 344)
+   643  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   644  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   645  .  .  .  .  .  .  .  .  .  .  .  .  }
+   646  .  .  .  .  .  .  .  .  .  .  .  .  Lbrace: api.go:43:26
+   647  .  .  .  .  .  .  .  .  .  .  .  .  Elts: []ast.Expr (len = 1) {
+   648  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.KeyValueExpr {
+   649  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.BasicLit {
+   650  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:44:4
+   651  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   652  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"rvasily\""
+   653  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   654  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:44:13
+   655  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.UnaryExpr {
+   656  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  OpPos: api.go:44:15
+   657  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Op: &
+   658  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.CompositeLit {
+   659  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   660  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:44:16
+   661  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "User"
+   662  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 344)
+   663  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   664  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lbrace: api.go:44:20
+   665  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Elts: []ast.Expr (len = 4) {
+   666  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.KeyValueExpr {
+   667  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+   668  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:45:5
+   669  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+   670  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   671  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:45:7
+   672  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.BasicLit {
+   673  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:45:15
+   674  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   675  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "42"
+   676  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   677  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   678  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.KeyValueExpr {
+   679  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+   680  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:46:5
+   681  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+   682  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   683  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:46:10
+   684  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.BasicLit {
+   685  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:46:15
+   686  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   687  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"rvasily\""
+   688  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   689  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   690  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  2: *ast.KeyValueExpr {
+   691  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+   692  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:47:5
+   693  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "FullName"
+   694  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   695  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:47:13
+   696  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.BasicLit {
+   697  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:47:15
+   698  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   699  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"Vasily Romanov\""
+   700  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   701  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   702  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  3: *ast.KeyValueExpr {
+   703  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+   704  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:48:5
+   705  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Status"
+   706  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   707  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:48:11
+   708  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.Ident {
+   709  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:48:15
+   710  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "statusAdmin"
+   711  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 257)
+   712  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   713  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   714  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   715  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rbrace: api.go:49:4
+   716  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Incomplete: false
+   717  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   718  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   719  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   720  .  .  .  .  .  .  .  .  .  .  .  .  }
+   721  .  .  .  .  .  .  .  .  .  .  .  .  Rbrace: api.go:50:3
+   722  .  .  .  .  .  .  .  .  .  .  .  .  Incomplete: false
+   723  .  .  .  .  .  .  .  .  .  .  .  }
+   724  .  .  .  .  .  .  .  .  .  .  }
+   725  .  .  .  .  .  .  .  .  .  .  2: *ast.KeyValueExpr {
+   726  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+   727  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:51:3
+   728  .  .  .  .  .  .  .  .  .  .  .  .  Name: "nextID"
+   729  .  .  .  .  .  .  .  .  .  .  .  }
+   730  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:51:9
+   731  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.BasicLit {
+   732  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:51:11
+   733  .  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   734  .  .  .  .  .  .  .  .  .  .  .  .  Value: "43"
+   735  .  .  .  .  .  .  .  .  .  .  .  }
+   736  .  .  .  .  .  .  .  .  .  .  }
+   737  .  .  .  .  .  .  .  .  .  .  3: *ast.KeyValueExpr {
+   738  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+   739  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:52:3
+   740  .  .  .  .  .  .  .  .  .  .  .  .  Name: "mu"
+   741  .  .  .  .  .  .  .  .  .  .  .  }
+   742  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:52:5
+   743  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.UnaryExpr {
+   744  .  .  .  .  .  .  .  .  .  .  .  .  OpPos: api.go:52:11
+   745  .  .  .  .  .  .  .  .  .  .  .  .  Op: &
+   746  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.CompositeLit {
+   747  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.SelectorExpr {
+   748  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   749  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:52:12
+   750  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "sync"
+   751  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   752  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   753  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:52:17
+   754  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "RWMutex"
+   755  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   756  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   757  .  .  .  .  .  .  .  .  .  .  .  .  .  Lbrace: api.go:52:24
+   758  .  .  .  .  .  .  .  .  .  .  .  .  .  Rbrace: api.go:52:25
+   759  .  .  .  .  .  .  .  .  .  .  .  .  .  Incomplete: false
+   760  .  .  .  .  .  .  .  .  .  .  .  .  }
+   761  .  .  .  .  .  .  .  .  .  .  .  }
+   762  .  .  .  .  .  .  .  .  .  .  }
+   763  .  .  .  .  .  .  .  .  .  }
+   764  .  .  .  .  .  .  .  .  .  Rbrace: api.go:53:2
+   765  .  .  .  .  .  .  .  .  .  Incomplete: false
+   766  .  .  .  .  .  .  .  .  }
+   767  .  .  .  .  .  .  .  }
+   768  .  .  .  .  .  .  }
+   769  .  .  .  .  .  }
+   770  .  .  .  .  }
+   771  .  .  .  .  Rbrace: api.go:54:1
+   772  .  .  .  }
+   773  .  .  }
+   774  .  .  6: *ast.GenDecl {
+   775  .  .  .  TokPos: api.go:56:1
+   776  .  .  .  Tok: type
+   777  .  .  .  Lparen: -
+   778  .  .  .  Specs: []ast.Spec (len = 1) {
+   779  .  .  .  .  0: *ast.TypeSpec {
+   780  .  .  .  .  .  Name: *ast.Ident {
+   781  .  .  .  .  .  .  NamePos: api.go:56:6
+   782  .  .  .  .  .  .  Name: "ProfileParams"
+   783  .  .  .  .  .  .  Obj: *ast.Object {
+   784  .  .  .  .  .  .  .  Kind: type
+   785  .  .  .  .  .  .  .  Name: "ProfileParams"
+   786  .  .  .  .  .  .  .  Decl: *(obj @ 779)
+   787  .  .  .  .  .  .  }
+   788  .  .  .  .  .  }
+   789  .  .  .  .  .  Assign: -
+   790  .  .  .  .  .  Type: *ast.StructType {
+   791  .  .  .  .  .  .  Struct: api.go:56:20
+   792  .  .  .  .  .  .  Fields: *ast.FieldList {
+   793  .  .  .  .  .  .  .  Opening: api.go:56:27
+   794  .  .  .  .  .  .  .  List: []*ast.Field (len = 1) {
+   795  .  .  .  .  .  .  .  .  0: *ast.Field {
+   796  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   797  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   798  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:57:2
+   799  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+   800  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   801  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   802  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+   803  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 795)
+   804  .  .  .  .  .  .  .  .  .  .  .  }
+   805  .  .  .  .  .  .  .  .  .  .  }
+   806  .  .  .  .  .  .  .  .  .  }
+   807  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   808  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:57:8
+   809  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   810  .  .  .  .  .  .  .  .  .  }
+   811  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+   812  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:57:15
+   813  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   814  .  .  .  .  .  .  .  .  .  .  Value: "`apivalidator:\"required\"`"
+   815  .  .  .  .  .  .  .  .  .  }
+   816  .  .  .  .  .  .  .  .  }
+   817  .  .  .  .  .  .  .  }
+   818  .  .  .  .  .  .  .  Closing: api.go:58:1
+   819  .  .  .  .  .  .  }
+   820  .  .  .  .  .  .  Incomplete: false
+   821  .  .  .  .  .  }
+   822  .  .  .  .  }
+   823  .  .  .  }
+   824  .  .  .  Rparen: -
+   825  .  .  }
+   826  .  .  7: *ast.GenDecl {
+   827  .  .  .  TokPos: api.go:60:1
+   828  .  .  .  Tok: type
+   829  .  .  .  Lparen: -
+   830  .  .  .  Specs: []ast.Spec (len = 1) {
+   831  .  .  .  .  0: *ast.TypeSpec {
+   832  .  .  .  .  .  Name: *ast.Ident {
+   833  .  .  .  .  .  .  NamePos: api.go:60:6
+   834  .  .  .  .  .  .  Name: "CreateParams"
+   835  .  .  .  .  .  .  Obj: *ast.Object {
+   836  .  .  .  .  .  .  .  Kind: type
+   837  .  .  .  .  .  .  .  Name: "CreateParams"
+   838  .  .  .  .  .  .  .  Decl: *(obj @ 831)
+   839  .  .  .  .  .  .  }
+   840  .  .  .  .  .  }
+   841  .  .  .  .  .  Assign: -
+   842  .  .  .  .  .  Type: *ast.StructType {
+   843  .  .  .  .  .  .  Struct: api.go:60:19
+   844  .  .  .  .  .  .  Fields: *ast.FieldList {
+   845  .  .  .  .  .  .  .  Opening: api.go:60:26
+   846  .  .  .  .  .  .  .  List: []*ast.Field (len = 4) {
+   847  .  .  .  .  .  .  .  .  0: *ast.Field {
+   848  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   849  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   850  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:61:2
+   851  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+   852  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   853  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   854  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+   855  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 847)
+   856  .  .  .  .  .  .  .  .  .  .  .  }
+   857  .  .  .  .  .  .  .  .  .  .  }
+   858  .  .  .  .  .  .  .  .  .  }
+   859  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   860  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:61:9
+   861  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   862  .  .  .  .  .  .  .  .  .  }
+   863  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+   864  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:61:16
+   865  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   866  .  .  .  .  .  .  .  .  .  .  Value: "`apivalidator:\"required,min=10\"`"
+   867  .  .  .  .  .  .  .  .  .  }
+   868  .  .  .  .  .  .  .  .  }
+   869  .  .  .  .  .  .  .  .  1: *ast.Field {
+   870  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   871  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   872  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:62:2
+   873  .  .  .  .  .  .  .  .  .  .  .  Name: "Name"
+   874  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   875  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   876  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Name"
+   877  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 869)
+   878  .  .  .  .  .  .  .  .  .  .  .  }
+   879  .  .  .  .  .  .  .  .  .  .  }
+   880  .  .  .  .  .  .  .  .  .  }
+   881  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   882  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:62:9
+   883  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   884  .  .  .  .  .  .  .  .  .  }
+   885  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+   886  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:62:16
+   887  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   888  .  .  .  .  .  .  .  .  .  .  Value: "`apivalidator:\"paramname=full_name\"`"
+   889  .  .  .  .  .  .  .  .  .  }
+   890  .  .  .  .  .  .  .  .  }
+   891  .  .  .  .  .  .  .  .  2: *ast.Field {
+   892  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   893  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   894  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:63:2
+   895  .  .  .  .  .  .  .  .  .  .  .  Name: "Status"
+   896  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   897  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   898  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Status"
+   899  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 891)
+   900  .  .  .  .  .  .  .  .  .  .  .  }
+   901  .  .  .  .  .  .  .  .  .  .  }
+   902  .  .  .  .  .  .  .  .  .  }
+   903  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   904  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:63:9
+   905  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   906  .  .  .  .  .  .  .  .  .  }
+   907  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+   908  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:63:16
+   909  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   910  .  .  .  .  .  .  .  .  .  .  Value: "`apivalidator:\"enum=user|moderator|admin,default=user\"`"
+   911  .  .  .  .  .  .  .  .  .  }
+   912  .  .  .  .  .  .  .  .  }
+   913  .  .  .  .  .  .  .  .  3: *ast.Field {
+   914  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   915  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   916  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:64:2
+   917  .  .  .  .  .  .  .  .  .  .  .  Name: "Age"
+   918  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   919  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   920  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Age"
+   921  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 913)
+   922  .  .  .  .  .  .  .  .  .  .  .  }
+   923  .  .  .  .  .  .  .  .  .  .  }
+   924  .  .  .  .  .  .  .  .  .  }
+   925  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   926  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:64:9
+   927  .  .  .  .  .  .  .  .  .  .  Name: "int"
+   928  .  .  .  .  .  .  .  .  .  }
+   929  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+   930  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:64:16
+   931  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   932  .  .  .  .  .  .  .  .  .  .  Value: "`apivalidator:\"min=0,max=128\"`"
+   933  .  .  .  .  .  .  .  .  .  }
+   934  .  .  .  .  .  .  .  .  }
+   935  .  .  .  .  .  .  .  }
+   936  .  .  .  .  .  .  .  Closing: api.go:65:1
+   937  .  .  .  .  .  .  }
+   938  .  .  .  .  .  .  Incomplete: false
+   939  .  .  .  .  .  }
+   940  .  .  .  .  }
+   941  .  .  .  }
+   942  .  .  .  Rparen: -
+   943  .  .  }
+   944  .  .  8: *ast.GenDecl {
+   945  .  .  .  TokPos: api.go:67:1
+   946  .  .  .  Tok: type
+   947  .  .  .  Lparen: -
+   948  .  .  .  Specs: []ast.Spec (len = 1) {
+   949  .  .  .  .  0: *(obj @ 347)
+   950  .  .  .  }
+   951  .  .  .  Rparen: -
+   952  .  .  }
+   953  .  .  9: *ast.GenDecl {
+   954  .  .  .  TokPos: api.go:74:1
+   955  .  .  .  Tok: type
+   956  .  .  .  Lparen: -
+   957  .  .  .  Specs: []ast.Spec (len = 1) {
+   958  .  .  .  .  0: *ast.TypeSpec {
+   959  .  .  .  .  .  Name: *ast.Ident {
+   960  .  .  .  .  .  .  NamePos: api.go:74:6
+   961  .  .  .  .  .  .  Name: "NewUser"
+   962  .  .  .  .  .  .  Obj: *ast.Object {
+   963  .  .  .  .  .  .  .  Kind: type
+   964  .  .  .  .  .  .  .  Name: "NewUser"
+   965  .  .  .  .  .  .  .  Decl: *(obj @ 958)
+   966  .  .  .  .  .  .  }
+   967  .  .  .  .  .  }
+   968  .  .  .  .  .  Assign: -
+   969  .  .  .  .  .  Type: *ast.StructType {
+   970  .  .  .  .  .  .  Struct: api.go:74:14
+   971  .  .  .  .  .  .  Fields: *ast.FieldList {
+   972  .  .  .  .  .  .  .  Opening: api.go:74:21
+   973  .  .  .  .  .  .  .  List: []*ast.Field (len = 1) {
+   974  .  .  .  .  .  .  .  .  0: *ast.Field {
+   975  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   976  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   977  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:75:2
+   978  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+   979  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   980  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   981  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+   982  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 974)
+   983  .  .  .  .  .  .  .  .  .  .  .  }
+   984  .  .  .  .  .  .  .  .  .  .  }
+   985  .  .  .  .  .  .  .  .  .  }
+   986  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   987  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:75:5
+   988  .  .  .  .  .  .  .  .  .  .  Name: "uint64"
+   989  .  .  .  .  .  .  .  .  .  }
+   990  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+   991  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:75:12
+   992  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   993  .  .  .  .  .  .  .  .  .  .  Value: "`json:\"id\"`"
+   994  .  .  .  .  .  .  .  .  .  }
+   995  .  .  .  .  .  .  .  .  }
+   996  .  .  .  .  .  .  .  }
+   997  .  .  .  .  .  .  .  Closing: api.go:76:1
+   998  .  .  .  .  .  .  }
+   999  .  .  .  .  .  .  Incomplete: false
+  1000  .  .  .  .  .  }
+  1001  .  .  .  .  }
+  1002  .  .  .  }
+  1003  .  .  .  Rparen: -
+  1004  .  .  }
+  1005  .  .  10: *ast.FuncDecl {
+  1006  .  .  .  Doc: *ast.CommentGroup {
+  1007  .  .  .  .  List: []*ast.Comment (len = 1) {
+  1008  .  .  .  .  .  0: *ast.Comment {
+  1009  .  .  .  .  .  .  Slash: api.go:78:1
+  1010  .  .  .  .  .  .  Text: "// apigen:api {\"url\": \"/user/profile\", \"auth\": false}"
+  1011  .  .  .  .  .  }
+  1012  .  .  .  .  }
+  1013  .  .  .  }
+  1014  .  .  .  Recv: *ast.FieldList {
+  1015  .  .  .  .  Opening: api.go:79:6
+  1016  .  .  .  .  List: []*ast.Field (len = 1) {
+  1017  .  .  .  .  .  0: *ast.Field {
+  1018  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  1019  .  .  .  .  .  .  .  0: *ast.Ident {
+  1020  .  .  .  .  .  .  .  .  NamePos: api.go:79:7
+  1021  .  .  .  .  .  .  .  .  Name: "srv"
+  1022  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  1023  .  .  .  .  .  .  .  .  .  Kind: var
+  1024  .  .  .  .  .  .  .  .  .  Name: "srv"
+  1025  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 1017)
+  1026  .  .  .  .  .  .  .  .  }
+  1027  .  .  .  .  .  .  .  }
+  1028  .  .  .  .  .  .  }
+  1029  .  .  .  .  .  .  Type: *ast.StarExpr {
+  1030  .  .  .  .  .  .  .  Star: api.go:79:11
+  1031  .  .  .  .  .  .  .  X: *ast.Ident {
+  1032  .  .  .  .  .  .  .  .  NamePos: api.go:79:12
+  1033  .  .  .  .  .  .  .  .  Name: "MyApi"
+  1034  .  .  .  .  .  .  .  .  Obj: *(obj @ 285)
+  1035  .  .  .  .  .  .  .  }
+  1036  .  .  .  .  .  .  }
+  1037  .  .  .  .  .  }
+  1038  .  .  .  .  }
+  1039  .  .  .  .  Closing: api.go:79:17
+  1040  .  .  .  }
+  1041  .  .  .  Name: *ast.Ident {
+  1042  .  .  .  .  NamePos: api.go:79:19
+  1043  .  .  .  .  Name: "Profile"
+  1044  .  .  .  }
+  1045  .  .  .  Type: *ast.FuncType {
+  1046  .  .  .  .  Func: api.go:79:1
+  1047  .  .  .  .  Params: *ast.FieldList {
+  1048  .  .  .  .  .  Opening: api.go:79:26
+  1049  .  .  .  .  .  List: []*ast.Field (len = 2) {
+  1050  .  .  .  .  .  .  0: *ast.Field {
+  1051  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  1052  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  1053  .  .  .  .  .  .  .  .  .  NamePos: api.go:79:27
+  1054  .  .  .  .  .  .  .  .  .  Name: "ctx"
+  1055  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  1056  .  .  .  .  .  .  .  .  .  .  Kind: var
+  1057  .  .  .  .  .  .  .  .  .  .  Name: "ctx"
+  1058  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 1050)
+  1059  .  .  .  .  .  .  .  .  .  }
+  1060  .  .  .  .  .  .  .  .  }
+  1061  .  .  .  .  .  .  .  }
+  1062  .  .  .  .  .  .  .  Type: *ast.SelectorExpr {
+  1063  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1064  .  .  .  .  .  .  .  .  .  NamePos: api.go:79:31
+  1065  .  .  .  .  .  .  .  .  .  Name: "context"
+  1066  .  .  .  .  .  .  .  .  }
+  1067  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1068  .  .  .  .  .  .  .  .  .  NamePos: api.go:79:39
+  1069  .  .  .  .  .  .  .  .  .  Name: "Context"
+  1070  .  .  .  .  .  .  .  .  }
+  1071  .  .  .  .  .  .  .  }
+  1072  .  .  .  .  .  .  }
+  1073  .  .  .  .  .  .  1: *ast.Field {
+  1074  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  1075  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  1076  .  .  .  .  .  .  .  .  .  NamePos: api.go:79:48
+  1077  .  .  .  .  .  .  .  .  .  Name: "in"
+  1078  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  1079  .  .  .  .  .  .  .  .  .  .  Kind: var
+  1080  .  .  .  .  .  .  .  .  .  .  Name: "in"
+  1081  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 1073)
+  1082  .  .  .  .  .  .  .  .  .  }
+  1083  .  .  .  .  .  .  .  .  }
+  1084  .  .  .  .  .  .  .  }
+  1085  .  .  .  .  .  .  .  Type: *ast.Ident {
+  1086  .  .  .  .  .  .  .  .  NamePos: api.go:79:51
+  1087  .  .  .  .  .  .  .  .  Name: "ProfileParams"
+  1088  .  .  .  .  .  .  .  .  Obj: *(obj @ 783)
+  1089  .  .  .  .  .  .  .  }
+  1090  .  .  .  .  .  .  }
+  1091  .  .  .  .  .  }
+  1092  .  .  .  .  .  Closing: api.go:79:64
+  1093  .  .  .  .  }
+  1094  .  .  .  .  Results: *ast.FieldList {
+  1095  .  .  .  .  .  Opening: api.go:79:66
+  1096  .  .  .  .  .  List: []*ast.Field (len = 2) {
+  1097  .  .  .  .  .  .  0: *ast.Field {
+  1098  .  .  .  .  .  .  .  Type: *ast.StarExpr {
+  1099  .  .  .  .  .  .  .  .  Star: api.go:79:67
+  1100  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1101  .  .  .  .  .  .  .  .  .  NamePos: api.go:79:68
+  1102  .  .  .  .  .  .  .  .  .  Name: "User"
+  1103  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 344)
+  1104  .  .  .  .  .  .  .  .  }
+  1105  .  .  .  .  .  .  .  }
+  1106  .  .  .  .  .  .  }
+  1107  .  .  .  .  .  .  1: *ast.Field {
+  1108  .  .  .  .  .  .  .  Type: *ast.Ident {
+  1109  .  .  .  .  .  .  .  .  NamePos: api.go:79:74
+  1110  .  .  .  .  .  .  .  .  Name: "error"
+  1111  .  .  .  .  .  .  .  }
+  1112  .  .  .  .  .  .  }
+  1113  .  .  .  .  .  }
+  1114  .  .  .  .  .  Closing: api.go:79:79
+  1115  .  .  .  .  }
+  1116  .  .  .  }
+  1117  .  .  .  Body: *ast.BlockStmt {
+  1118  .  .  .  .  Lbrace: api.go:79:81
+  1119  .  .  .  .  List: []ast.Stmt (len = 6) {
+  1120  .  .  .  .  .  0: *ast.IfStmt {
+  1121  .  .  .  .  .  .  If: api.go:81:2
+  1122  .  .  .  .  .  .  Cond: *ast.BinaryExpr {
+  1123  .  .  .  .  .  .  .  X: *ast.SelectorExpr {
+  1124  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1125  .  .  .  .  .  .  .  .  .  NamePos: api.go:81:5
+  1126  .  .  .  .  .  .  .  .  .  Name: "in"
+  1127  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1078)
+  1128  .  .  .  .  .  .  .  .  }
+  1129  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1130  .  .  .  .  .  .  .  .  .  NamePos: api.go:81:8
+  1131  .  .  .  .  .  .  .  .  .  Name: "Login"
+  1132  .  .  .  .  .  .  .  .  }
+  1133  .  .  .  .  .  .  .  }
+  1134  .  .  .  .  .  .  .  OpPos: api.go:81:14
+  1135  .  .  .  .  .  .  .  Op: ==
+  1136  .  .  .  .  .  .  .  Y: *ast.BasicLit {
+  1137  .  .  .  .  .  .  .  .  ValuePos: api.go:81:17
+  1138  .  .  .  .  .  .  .  .  Kind: STRING
+  1139  .  .  .  .  .  .  .  .  Value: "\"bad_user\""
+  1140  .  .  .  .  .  .  .  }
+  1141  .  .  .  .  .  .  }
+  1142  .  .  .  .  .  .  Body: *ast.BlockStmt {
+  1143  .  .  .  .  .  .  .  Lbrace: api.go:81:28
+  1144  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
+  1145  .  .  .  .  .  .  .  .  0: *ast.ReturnStmt {
+  1146  .  .  .  .  .  .  .  .  .  Return: api.go:82:3
+  1147  .  .  .  .  .  .  .  .  .  Results: []ast.Expr (len = 2) {
+  1148  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  1149  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:82:10
+  1150  .  .  .  .  .  .  .  .  .  .  .  Name: "nil"
+  1151  .  .  .  .  .  .  .  .  .  .  }
+  1152  .  .  .  .  .  .  .  .  .  .  1: *ast.CallExpr {
+  1153  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+  1154  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1155  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:82:15
+  1156  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "fmt"
+  1157  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1158  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1159  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:82:19
+  1160  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Errorf"
+  1161  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1162  .  .  .  .  .  .  .  .  .  .  .  }
+  1163  .  .  .  .  .  .  .  .  .  .  .  Lparen: api.go:82:25
+  1164  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+  1165  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+  1166  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:82:26
+  1167  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+  1168  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"bad user\""
+  1169  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1170  .  .  .  .  .  .  .  .  .  .  .  }
+  1171  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+  1172  .  .  .  .  .  .  .  .  .  .  .  Rparen: api.go:82:36
+  1173  .  .  .  .  .  .  .  .  .  .  }
+  1174  .  .  .  .  .  .  .  .  .  }
+  1175  .  .  .  .  .  .  .  .  }
+  1176  .  .  .  .  .  .  .  }
+  1177  .  .  .  .  .  .  .  Rbrace: api.go:83:2
+  1178  .  .  .  .  .  .  }
+  1179  .  .  .  .  .  }
+  1180  .  .  .  .  .  1: *ast.ExprStmt {
+  1181  .  .  .  .  .  .  X: *ast.CallExpr {
+  1182  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+  1183  .  .  .  .  .  .  .  .  X: *ast.SelectorExpr {
+  1184  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1185  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:85:2
+  1186  .  .  .  .  .  .  .  .  .  .  Name: "srv"
+  1187  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1022)
+  1188  .  .  .  .  .  .  .  .  .  }
+  1189  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1190  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:85:6
+  1191  .  .  .  .  .  .  .  .  .  .  Name: "mu"
+  1192  .  .  .  .  .  .  .  .  .  }
+  1193  .  .  .  .  .  .  .  .  }
+  1194  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1195  .  .  .  .  .  .  .  .  .  NamePos: api.go:85:9
+  1196  .  .  .  .  .  .  .  .  .  Name: "RLock"
+  1197  .  .  .  .  .  .  .  .  }
+  1198  .  .  .  .  .  .  .  }
+  1199  .  .  .  .  .  .  .  Lparen: api.go:85:14
+  1200  .  .  .  .  .  .  .  Ellipsis: -
+  1201  .  .  .  .  .  .  .  Rparen: api.go:85:15
+  1202  .  .  .  .  .  .  }
+  1203  .  .  .  .  .  }
+  1204  .  .  .  .  .  2: *ast.AssignStmt {
+  1205  .  .  .  .  .  .  Lhs: []ast.Expr (len = 2) {
+  1206  .  .  .  .  .  .  .  0: *ast.Ident {
+  1207  .  .  .  .  .  .  .  .  NamePos: api.go:86:2
+  1208  .  .  .  .  .  .  .  .  Name: "user"
+  1209  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  1210  .  .  .  .  .  .  .  .  .  Kind: var
+  1211  .  .  .  .  .  .  .  .  .  Name: "user"
+  1212  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 1204)
+  1213  .  .  .  .  .  .  .  .  }
+  1214  .  .  .  .  .  .  .  }
+  1215  .  .  .  .  .  .  .  1: *ast.Ident {
+  1216  .  .  .  .  .  .  .  .  NamePos: api.go:86:8
+  1217  .  .  .  .  .  .  .  .  Name: "exist"
+  1218  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  1219  .  .  .  .  .  .  .  .  .  Kind: var
+  1220  .  .  .  .  .  .  .  .  .  Name: "exist"
+  1221  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 1204)
+  1222  .  .  .  .  .  .  .  .  }
+  1223  .  .  .  .  .  .  .  }
+  1224  .  .  .  .  .  .  }
+  1225  .  .  .  .  .  .  TokPos: api.go:86:14
+  1226  .  .  .  .  .  .  Tok: :=
+  1227  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+  1228  .  .  .  .  .  .  .  0: *ast.IndexExpr {
+  1229  .  .  .  .  .  .  .  .  X: *ast.SelectorExpr {
+  1230  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1231  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:86:17
+  1232  .  .  .  .  .  .  .  .  .  .  Name: "srv"
+  1233  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1022)
+  1234  .  .  .  .  .  .  .  .  .  }
+  1235  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1236  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:86:21
+  1237  .  .  .  .  .  .  .  .  .  .  Name: "users"
+  1238  .  .  .  .  .  .  .  .  .  }
+  1239  .  .  .  .  .  .  .  .  }
+  1240  .  .  .  .  .  .  .  .  Lbrack: api.go:86:26
+  1241  .  .  .  .  .  .  .  .  Index: *ast.SelectorExpr {
+  1242  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1243  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:86:27
+  1244  .  .  .  .  .  .  .  .  .  .  Name: "in"
+  1245  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1078)
+  1246  .  .  .  .  .  .  .  .  .  }
+  1247  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1248  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:86:30
+  1249  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+  1250  .  .  .  .  .  .  .  .  .  }
+  1251  .  .  .  .  .  .  .  .  }
+  1252  .  .  .  .  .  .  .  .  Rbrack: api.go:86:35
+  1253  .  .  .  .  .  .  .  }
+  1254  .  .  .  .  .  .  }
+  1255  .  .  .  .  .  }
+  1256  .  .  .  .  .  3: *ast.ExprStmt {
+  1257  .  .  .  .  .  .  X: *ast.CallExpr {
+  1258  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+  1259  .  .  .  .  .  .  .  .  X: *ast.SelectorExpr {
+  1260  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1261  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:87:2
+  1262  .  .  .  .  .  .  .  .  .  .  Name: "srv"
+  1263  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1022)
+  1264  .  .  .  .  .  .  .  .  .  }
+  1265  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1266  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:87:6
+  1267  .  .  .  .  .  .  .  .  .  .  Name: "mu"
+  1268  .  .  .  .  .  .  .  .  .  }
+  1269  .  .  .  .  .  .  .  .  }
+  1270  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1271  .  .  .  .  .  .  .  .  .  NamePos: api.go:87:9
+  1272  .  .  .  .  .  .  .  .  .  Name: "RUnlock"
+  1273  .  .  .  .  .  .  .  .  }
+  1274  .  .  .  .  .  .  .  }
+  1275  .  .  .  .  .  .  .  Lparen: api.go:87:16
+  1276  .  .  .  .  .  .  .  Ellipsis: -
+  1277  .  .  .  .  .  .  .  Rparen: api.go:87:17
+  1278  .  .  .  .  .  .  }
+  1279  .  .  .  .  .  }
+  1280  .  .  .  .  .  4: *ast.IfStmt {
+  1281  .  .  .  .  .  .  If: api.go:88:2
+  1282  .  .  .  .  .  .  Cond: *ast.UnaryExpr {
+  1283  .  .  .  .  .  .  .  OpPos: api.go:88:5
+  1284  .  .  .  .  .  .  .  Op: !
+  1285  .  .  .  .  .  .  .  X: *ast.Ident {
+  1286  .  .  .  .  .  .  .  .  NamePos: api.go:88:6
+  1287  .  .  .  .  .  .  .  .  Name: "exist"
+  1288  .  .  .  .  .  .  .  .  Obj: *(obj @ 1218)
+  1289  .  .  .  .  .  .  .  }
+  1290  .  .  .  .  .  .  }
+  1291  .  .  .  .  .  .  Body: *ast.BlockStmt {
+  1292  .  .  .  .  .  .  .  Lbrace: api.go:88:12
+  1293  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
+  1294  .  .  .  .  .  .  .  .  0: *ast.ReturnStmt {
+  1295  .  .  .  .  .  .  .  .  .  Return: api.go:89:3
+  1296  .  .  .  .  .  .  .  .  .  Results: []ast.Expr (len = 2) {
+  1297  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  1298  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:89:10
+  1299  .  .  .  .  .  .  .  .  .  .  .  Name: "nil"
+  1300  .  .  .  .  .  .  .  .  .  .  }
+  1301  .  .  .  .  .  .  .  .  .  .  1: *ast.CompositeLit {
+  1302  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+  1303  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:89:15
+  1304  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ApiError"
+  1305  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 68)
+  1306  .  .  .  .  .  .  .  .  .  .  .  }
+  1307  .  .  .  .  .  .  .  .  .  .  .  Lbrace: api.go:89:23
+  1308  .  .  .  .  .  .  .  .  .  .  .  Elts: []ast.Expr (len = 2) {
+  1309  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.SelectorExpr {
+  1310  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1311  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:89:24
+  1312  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "http"
+  1313  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1314  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1315  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:89:29
+  1316  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "StatusNotFound"
+  1317  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1318  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1319  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.CallExpr {
+  1320  .  .  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+  1321  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1322  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:89:45
+  1323  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "fmt"
+  1324  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1325  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1326  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:89:49
+  1327  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Errorf"
+  1328  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1329  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1330  .  .  .  .  .  .  .  .  .  .  .  .  .  Lparen: api.go:89:55
+  1331  .  .  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+  1332  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+  1333  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:89:56
+  1334  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+  1335  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"user not exist\""
+  1336  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1337  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1338  .  .  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+  1339  .  .  .  .  .  .  .  .  .  .  .  .  .  Rparen: api.go:89:72
+  1340  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1341  .  .  .  .  .  .  .  .  .  .  .  }
+  1342  .  .  .  .  .  .  .  .  .  .  .  Rbrace: api.go:89:73
+  1343  .  .  .  .  .  .  .  .  .  .  .  Incomplete: false
+  1344  .  .  .  .  .  .  .  .  .  .  }
+  1345  .  .  .  .  .  .  .  .  .  }
+  1346  .  .  .  .  .  .  .  .  }
+  1347  .  .  .  .  .  .  .  }
+  1348  .  .  .  .  .  .  .  Rbrace: api.go:90:2
+  1349  .  .  .  .  .  .  }
+  1350  .  .  .  .  .  }
+  1351  .  .  .  .  .  5: *ast.ReturnStmt {
+  1352  .  .  .  .  .  .  Return: api.go:92:2
+  1353  .  .  .  .  .  .  Results: []ast.Expr (len = 2) {
+  1354  .  .  .  .  .  .  .  0: *ast.Ident {
+  1355  .  .  .  .  .  .  .  .  NamePos: api.go:92:9
+  1356  .  .  .  .  .  .  .  .  Name: "user"
+  1357  .  .  .  .  .  .  .  .  Obj: *(obj @ 1209)
+  1358  .  .  .  .  .  .  .  }
+  1359  .  .  .  .  .  .  .  1: *ast.Ident {
+  1360  .  .  .  .  .  .  .  .  NamePos: api.go:92:15
+  1361  .  .  .  .  .  .  .  .  Name: "nil"
+  1362  .  .  .  .  .  .  .  }
+  1363  .  .  .  .  .  .  }
+  1364  .  .  .  .  .  }
+  1365  .  .  .  .  }
+  1366  .  .  .  .  Rbrace: api.go:93:1
+  1367  .  .  .  }
+  1368  .  .  }
+  1369  .  .  11: *ast.FuncDecl {
+  1370  .  .  .  Doc: *ast.CommentGroup {
+  1371  .  .  .  .  List: []*ast.Comment (len = 1) {
+  1372  .  .  .  .  .  0: *ast.Comment {
+  1373  .  .  .  .  .  .  Slash: api.go:95:1
+  1374  .  .  .  .  .  .  Text: "// apigen:api {\"url\": \"/user/create\", \"auth\": true, \"method\": \"POST\"}"
+  1375  .  .  .  .  .  }
+  1376  .  .  .  .  }
+  1377  .  .  .  }
+  1378  .  .  .  Recv: *ast.FieldList {
+  1379  .  .  .  .  Opening: api.go:96:6
+  1380  .  .  .  .  List: []*ast.Field (len = 1) {
+  1381  .  .  .  .  .  0: *ast.Field {
+  1382  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  1383  .  .  .  .  .  .  .  0: *ast.Ident {
+  1384  .  .  .  .  .  .  .  .  NamePos: api.go:96:7
+  1385  .  .  .  .  .  .  .  .  Name: "srv"
+  1386  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  1387  .  .  .  .  .  .  .  .  .  Kind: var
+  1388  .  .  .  .  .  .  .  .  .  Name: "srv"
+  1389  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 1381)
+  1390  .  .  .  .  .  .  .  .  }
+  1391  .  .  .  .  .  .  .  }
+  1392  .  .  .  .  .  .  }
+  1393  .  .  .  .  .  .  Type: *ast.StarExpr {
+  1394  .  .  .  .  .  .  .  Star: api.go:96:11
+  1395  .  .  .  .  .  .  .  X: *ast.Ident {
+  1396  .  .  .  .  .  .  .  .  NamePos: api.go:96:12
+  1397  .  .  .  .  .  .  .  .  Name: "MyApi"
+  1398  .  .  .  .  .  .  .  .  Obj: *(obj @ 285)
+  1399  .  .  .  .  .  .  .  }
+  1400  .  .  .  .  .  .  }
+  1401  .  .  .  .  .  }
+  1402  .  .  .  .  }
+  1403  .  .  .  .  Closing: api.go:96:17
+  1404  .  .  .  }
+  1405  .  .  .  Name: *ast.Ident {
+  1406  .  .  .  .  NamePos: api.go:96:19
+  1407  .  .  .  .  Name: "Create"
+  1408  .  .  .  }
+  1409  .  .  .  Type: *ast.FuncType {
+  1410  .  .  .  .  Func: api.go:96:1
+  1411  .  .  .  .  Params: *ast.FieldList {
+  1412  .  .  .  .  .  Opening: api.go:96:25
+  1413  .  .  .  .  .  List: []*ast.Field (len = 2) {
+  1414  .  .  .  .  .  .  0: *ast.Field {
+  1415  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  1416  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  1417  .  .  .  .  .  .  .  .  .  NamePos: api.go:96:26
+  1418  .  .  .  .  .  .  .  .  .  Name: "ctx"
+  1419  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  1420  .  .  .  .  .  .  .  .  .  .  Kind: var
+  1421  .  .  .  .  .  .  .  .  .  .  Name: "ctx"
+  1422  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 1414)
+  1423  .  .  .  .  .  .  .  .  .  }
+  1424  .  .  .  .  .  .  .  .  }
+  1425  .  .  .  .  .  .  .  }
+  1426  .  .  .  .  .  .  .  Type: *ast.SelectorExpr {
+  1427  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1428  .  .  .  .  .  .  .  .  .  NamePos: api.go:96:30
+  1429  .  .  .  .  .  .  .  .  .  Name: "context"
+  1430  .  .  .  .  .  .  .  .  }
+  1431  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1432  .  .  .  .  .  .  .  .  .  NamePos: api.go:96:38
+  1433  .  .  .  .  .  .  .  .  .  Name: "Context"
+  1434  .  .  .  .  .  .  .  .  }
+  1435  .  .  .  .  .  .  .  }
+  1436  .  .  .  .  .  .  }
+  1437  .  .  .  .  .  .  1: *ast.Field {
+  1438  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  1439  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  1440  .  .  .  .  .  .  .  .  .  NamePos: api.go:96:47
+  1441  .  .  .  .  .  .  .  .  .  Name: "in"
+  1442  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  1443  .  .  .  .  .  .  .  .  .  .  Kind: var
+  1444  .  .  .  .  .  .  .  .  .  .  Name: "in"
+  1445  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 1437)
+  1446  .  .  .  .  .  .  .  .  .  }
+  1447  .  .  .  .  .  .  .  .  }
+  1448  .  .  .  .  .  .  .  }
+  1449  .  .  .  .  .  .  .  Type: *ast.Ident {
+  1450  .  .  .  .  .  .  .  .  NamePos: api.go:96:50
+  1451  .  .  .  .  .  .  .  .  Name: "CreateParams"
+  1452  .  .  .  .  .  .  .  .  Obj: *(obj @ 835)
+  1453  .  .  .  .  .  .  .  }
+  1454  .  .  .  .  .  .  }
+  1455  .  .  .  .  .  }
+  1456  .  .  .  .  .  Closing: api.go:96:62
+  1457  .  .  .  .  }
+  1458  .  .  .  .  Results: *ast.FieldList {
+  1459  .  .  .  .  .  Opening: api.go:96:64
+  1460  .  .  .  .  .  List: []*ast.Field (len = 2) {
+  1461  .  .  .  .  .  .  0: *ast.Field {
+  1462  .  .  .  .  .  .  .  Type: *ast.StarExpr {
+  1463  .  .  .  .  .  .  .  .  Star: api.go:96:65
+  1464  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1465  .  .  .  .  .  .  .  .  .  NamePos: api.go:96:66
+  1466  .  .  .  .  .  .  .  .  .  Name: "NewUser"
+  1467  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 962)
+  1468  .  .  .  .  .  .  .  .  }
+  1469  .  .  .  .  .  .  .  }
+  1470  .  .  .  .  .  .  }
+  1471  .  .  .  .  .  .  1: *ast.Field {
+  1472  .  .  .  .  .  .  .  Type: *ast.Ident {
+  1473  .  .  .  .  .  .  .  .  NamePos: api.go:96:75
+  1474  .  .  .  .  .  .  .  .  Name: "error"
+  1475  .  .  .  .  .  .  .  }
+  1476  .  .  .  .  .  .  }
+  1477  .  .  .  .  .  }
+  1478  .  .  .  .  .  Closing: api.go:96:80
+  1479  .  .  .  .  }
+  1480  .  .  .  }
+  1481  .  .  .  Body: *ast.BlockStmt {
+  1482  .  .  .  .  Lbrace: api.go:96:82
+  1483  .  .  .  .  List: []ast.Stmt (len = 9) {
+  1484  .  .  .  .  .  0: *ast.IfStmt {
+  1485  .  .  .  .  .  .  If: api.go:97:2
+  1486  .  .  .  .  .  .  Cond: *ast.BinaryExpr {
+  1487  .  .  .  .  .  .  .  X: *ast.SelectorExpr {
+  1488  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1489  .  .  .  .  .  .  .  .  .  NamePos: api.go:97:5
+  1490  .  .  .  .  .  .  .  .  .  Name: "in"
+  1491  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1442)
+  1492  .  .  .  .  .  .  .  .  }
+  1493  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1494  .  .  .  .  .  .  .  .  .  NamePos: api.go:97:8
+  1495  .  .  .  .  .  .  .  .  .  Name: "Login"
+  1496  .  .  .  .  .  .  .  .  }
+  1497  .  .  .  .  .  .  .  }
+  1498  .  .  .  .  .  .  .  OpPos: api.go:97:14
+  1499  .  .  .  .  .  .  .  Op: ==
+  1500  .  .  .  .  .  .  .  Y: *ast.BasicLit {
+  1501  .  .  .  .  .  .  .  .  ValuePos: api.go:97:17
+  1502  .  .  .  .  .  .  .  .  Kind: STRING
+  1503  .  .  .  .  .  .  .  .  Value: "\"bad_username\""
+  1504  .  .  .  .  .  .  .  }
+  1505  .  .  .  .  .  .  }
+  1506  .  .  .  .  .  .  Body: *ast.BlockStmt {
+  1507  .  .  .  .  .  .  .  Lbrace: api.go:97:32
+  1508  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
+  1509  .  .  .  .  .  .  .  .  0: *ast.ReturnStmt {
+  1510  .  .  .  .  .  .  .  .  .  Return: api.go:98:3
+  1511  .  .  .  .  .  .  .  .  .  Results: []ast.Expr (len = 2) {
+  1512  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  1513  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:98:10
+  1514  .  .  .  .  .  .  .  .  .  .  .  Name: "nil"
+  1515  .  .  .  .  .  .  .  .  .  .  }
+  1516  .  .  .  .  .  .  .  .  .  .  1: *ast.CallExpr {
+  1517  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+  1518  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1519  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:98:15
+  1520  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "fmt"
+  1521  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1522  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1523  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:98:19
+  1524  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Errorf"
+  1525  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1526  .  .  .  .  .  .  .  .  .  .  .  }
+  1527  .  .  .  .  .  .  .  .  .  .  .  Lparen: api.go:98:25
+  1528  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+  1529  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+  1530  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:98:26
+  1531  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+  1532  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"bad user\""
+  1533  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1534  .  .  .  .  .  .  .  .  .  .  .  }
+  1535  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+  1536  .  .  .  .  .  .  .  .  .  .  .  Rparen: api.go:98:36
+  1537  .  .  .  .  .  .  .  .  .  .  }
+  1538  .  .  .  .  .  .  .  .  .  }
+  1539  .  .  .  .  .  .  .  .  }
+  1540  .  .  .  .  .  .  .  }
+  1541  .  .  .  .  .  .  .  Rbrace: api.go:99:2
+  1542  .  .  .  .  .  .  }
+  1543  .  .  .  .  .  }
+  1544  .  .  .  .  .  1: *ast.ExprStmt {
+  1545  .  .  .  .  .  .  X: *ast.CallExpr {
+  1546  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+  1547  .  .  .  .  .  .  .  .  X: *ast.SelectorExpr {
+  1548  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1549  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:101:2
+  1550  .  .  .  .  .  .  .  .  .  .  Name: "srv"
+  1551  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1386)
+  1552  .  .  .  .  .  .  .  .  .  }
+  1553  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1554  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:101:6
+  1555  .  .  .  .  .  .  .  .  .  .  Name: "mu"
+  1556  .  .  .  .  .  .  .  .  .  }
+  1557  .  .  .  .  .  .  .  .  }
+  1558  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1559  .  .  .  .  .  .  .  .  .  NamePos: api.go:101:9
+  1560  .  .  .  .  .  .  .  .  .  Name: "Lock"
+  1561  .  .  .  .  .  .  .  .  }
+  1562  .  .  .  .  .  .  .  }
+  1563  .  .  .  .  .  .  .  Lparen: api.go:101:13
+  1564  .  .  .  .  .  .  .  Ellipsis: -
+  1565  .  .  .  .  .  .  .  Rparen: api.go:101:14
+  1566  .  .  .  .  .  .  }
+  1567  .  .  .  .  .  }
+  1568  .  .  .  .  .  2: *ast.DeferStmt {
+  1569  .  .  .  .  .  .  Defer: api.go:102:2
+  1570  .  .  .  .  .  .  Call: *ast.CallExpr {
+  1571  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+  1572  .  .  .  .  .  .  .  .  X: *ast.SelectorExpr {
+  1573  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1574  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:102:8
+  1575  .  .  .  .  .  .  .  .  .  .  Name: "srv"
+  1576  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1386)
+  1577  .  .  .  .  .  .  .  .  .  }
+  1578  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1579  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:102:12
+  1580  .  .  .  .  .  .  .  .  .  .  Name: "mu"
+  1581  .  .  .  .  .  .  .  .  .  }
+  1582  .  .  .  .  .  .  .  .  }
+  1583  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1584  .  .  .  .  .  .  .  .  .  NamePos: api.go:102:15
+  1585  .  .  .  .  .  .  .  .  .  Name: "Unlock"
+  1586  .  .  .  .  .  .  .  .  }
+  1587  .  .  .  .  .  .  .  }
+  1588  .  .  .  .  .  .  .  Lparen: api.go:102:21
+  1589  .  .  .  .  .  .  .  Ellipsis: -
+  1590  .  .  .  .  .  .  .  Rparen: api.go:102:22
+  1591  .  .  .  .  .  .  }
+  1592  .  .  .  .  .  }
+  1593  .  .  .  .  .  3: *ast.AssignStmt {
+  1594  .  .  .  .  .  .  Lhs: []ast.Expr (len = 2) {
+  1595  .  .  .  .  .  .  .  0: *ast.Ident {
+  1596  .  .  .  .  .  .  .  .  NamePos: api.go:104:2
+  1597  .  .  .  .  .  .  .  .  Name: "_"
+  1598  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  1599  .  .  .  .  .  .  .  .  .  Kind: var
+  1600  .  .  .  .  .  .  .  .  .  Name: "_"
+  1601  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 1593)
+  1602  .  .  .  .  .  .  .  .  }
+  1603  .  .  .  .  .  .  .  }
+  1604  .  .  .  .  .  .  .  1: *ast.Ident {
+  1605  .  .  .  .  .  .  .  .  NamePos: api.go:104:5
+  1606  .  .  .  .  .  .  .  .  Name: "exist"
+  1607  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  1608  .  .  .  .  .  .  .  .  .  Kind: var
+  1609  .  .  .  .  .  .  .  .  .  Name: "exist"
+  1610  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 1593)
+  1611  .  .  .  .  .  .  .  .  }
+  1612  .  .  .  .  .  .  .  }
+  1613  .  .  .  .  .  .  }
+  1614  .  .  .  .  .  .  TokPos: api.go:104:11
+  1615  .  .  .  .  .  .  Tok: :=
+  1616  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+  1617  .  .  .  .  .  .  .  0: *ast.IndexExpr {
+  1618  .  .  .  .  .  .  .  .  X: *ast.SelectorExpr {
+  1619  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1620  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:104:14
+  1621  .  .  .  .  .  .  .  .  .  .  Name: "srv"
+  1622  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1386)
+  1623  .  .  .  .  .  .  .  .  .  }
+  1624  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1625  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:104:18
+  1626  .  .  .  .  .  .  .  .  .  .  Name: "users"
+  1627  .  .  .  .  .  .  .  .  .  }
+  1628  .  .  .  .  .  .  .  .  }
+  1629  .  .  .  .  .  .  .  .  Lbrack: api.go:104:23
+  1630  .  .  .  .  .  .  .  .  Index: *ast.SelectorExpr {
+  1631  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1632  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:104:24
+  1633  .  .  .  .  .  .  .  .  .  .  Name: "in"
+  1634  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1442)
+  1635  .  .  .  .  .  .  .  .  .  }
+  1636  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1637  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:104:27
+  1638  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+  1639  .  .  .  .  .  .  .  .  .  }
+  1640  .  .  .  .  .  .  .  .  }
+  1641  .  .  .  .  .  .  .  .  Rbrack: api.go:104:32
+  1642  .  .  .  .  .  .  .  }
+  1643  .  .  .  .  .  .  }
+  1644  .  .  .  .  .  }
+  1645  .  .  .  .  .  4: *ast.IfStmt {
+  1646  .  .  .  .  .  .  If: api.go:105:2
+  1647  .  .  .  .  .  .  Cond: *ast.Ident {
+  1648  .  .  .  .  .  .  .  NamePos: api.go:105:5
+  1649  .  .  .  .  .  .  .  Name: "exist"
+  1650  .  .  .  .  .  .  .  Obj: *(obj @ 1607)
+  1651  .  .  .  .  .  .  }
+  1652  .  .  .  .  .  .  Body: *ast.BlockStmt {
+  1653  .  .  .  .  .  .  .  Lbrace: api.go:105:11
+  1654  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
+  1655  .  .  .  .  .  .  .  .  0: *ast.ReturnStmt {
+  1656  .  .  .  .  .  .  .  .  .  Return: api.go:106:3
+  1657  .  .  .  .  .  .  .  .  .  Results: []ast.Expr (len = 2) {
+  1658  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  1659  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:106:10
+  1660  .  .  .  .  .  .  .  .  .  .  .  Name: "nil"
+  1661  .  .  .  .  .  .  .  .  .  .  }
+  1662  .  .  .  .  .  .  .  .  .  .  1: *ast.CompositeLit {
+  1663  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+  1664  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:106:15
+  1665  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ApiError"
+  1666  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 68)
+  1667  .  .  .  .  .  .  .  .  .  .  .  }
+  1668  .  .  .  .  .  .  .  .  .  .  .  Lbrace: api.go:106:23
+  1669  .  .  .  .  .  .  .  .  .  .  .  Elts: []ast.Expr (len = 2) {
+  1670  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.SelectorExpr {
+  1671  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1672  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:106:24
+  1673  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "http"
+  1674  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1675  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1676  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:106:29
+  1677  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "StatusConflict"
+  1678  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1679  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1680  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.CallExpr {
+  1681  .  .  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+  1682  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1683  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:106:45
+  1684  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "fmt"
+  1685  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1686  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1687  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:106:49
+  1688  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Errorf"
+  1689  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1690  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1691  .  .  .  .  .  .  .  .  .  .  .  .  .  Lparen: api.go:106:55
+  1692  .  .  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 2) {
+  1693  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+  1694  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:106:56
+  1695  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+  1696  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"user %s exist\""
+  1697  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1698  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.SelectorExpr {
+  1699  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1700  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:106:73
+  1701  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "in"
+  1702  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1442)
+  1703  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1704  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1705  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:106:76
+  1706  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+  1707  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1708  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1709  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1710  .  .  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+  1711  .  .  .  .  .  .  .  .  .  .  .  .  .  Rparen: api.go:106:81
+  1712  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1713  .  .  .  .  .  .  .  .  .  .  .  }
+  1714  .  .  .  .  .  .  .  .  .  .  .  Rbrace: api.go:106:82
+  1715  .  .  .  .  .  .  .  .  .  .  .  Incomplete: false
+  1716  .  .  .  .  .  .  .  .  .  .  }
+  1717  .  .  .  .  .  .  .  .  .  }
+  1718  .  .  .  .  .  .  .  .  }
+  1719  .  .  .  .  .  .  .  }
+  1720  .  .  .  .  .  .  .  Rbrace: api.go:107:2
+  1721  .  .  .  .  .  .  }
+  1722  .  .  .  .  .  }
+  1723  .  .  .  .  .  5: *ast.AssignStmt {
+  1724  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+  1725  .  .  .  .  .  .  .  0: *ast.Ident {
+  1726  .  .  .  .  .  .  .  .  NamePos: api.go:109:2
+  1727  .  .  .  .  .  .  .  .  Name: "id"
+  1728  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  1729  .  .  .  .  .  .  .  .  .  Kind: var
+  1730  .  .  .  .  .  .  .  .  .  Name: "id"
+  1731  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 1723)
+  1732  .  .  .  .  .  .  .  .  }
+  1733  .  .  .  .  .  .  .  }
+  1734  .  .  .  .  .  .  }
+  1735  .  .  .  .  .  .  TokPos: api.go:109:5
+  1736  .  .  .  .  .  .  Tok: :=
+  1737  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+  1738  .  .  .  .  .  .  .  0: *ast.SelectorExpr {
+  1739  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1740  .  .  .  .  .  .  .  .  .  NamePos: api.go:109:8
+  1741  .  .  .  .  .  .  .  .  .  Name: "srv"
+  1742  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1386)
+  1743  .  .  .  .  .  .  .  .  }
+  1744  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1745  .  .  .  .  .  .  .  .  .  NamePos: api.go:109:12
+  1746  .  .  .  .  .  .  .  .  .  Name: "nextID"
+  1747  .  .  .  .  .  .  .  .  }
+  1748  .  .  .  .  .  .  .  }
+  1749  .  .  .  .  .  .  }
+  1750  .  .  .  .  .  }
+  1751  .  .  .  .  .  6: *ast.IncDecStmt {
+  1752  .  .  .  .  .  .  X: *ast.SelectorExpr {
+  1753  .  .  .  .  .  .  .  X: *ast.Ident {
+  1754  .  .  .  .  .  .  .  .  NamePos: api.go:110:2
+  1755  .  .  .  .  .  .  .  .  Name: "srv"
+  1756  .  .  .  .  .  .  .  .  Obj: *(obj @ 1386)
+  1757  .  .  .  .  .  .  .  }
+  1758  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1759  .  .  .  .  .  .  .  .  NamePos: api.go:110:6
+  1760  .  .  .  .  .  .  .  .  Name: "nextID"
+  1761  .  .  .  .  .  .  .  }
+  1762  .  .  .  .  .  .  }
+  1763  .  .  .  .  .  .  TokPos: api.go:110:12
+  1764  .  .  .  .  .  .  Tok: ++
+  1765  .  .  .  .  .  }
+  1766  .  .  .  .  .  7: *ast.AssignStmt {
+  1767  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+  1768  .  .  .  .  .  .  .  0: *ast.IndexExpr {
+  1769  .  .  .  .  .  .  .  .  X: *ast.SelectorExpr {
+  1770  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1771  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:111:2
+  1772  .  .  .  .  .  .  .  .  .  .  Name: "srv"
+  1773  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1386)
+  1774  .  .  .  .  .  .  .  .  .  }
+  1775  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1776  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:111:6
+  1777  .  .  .  .  .  .  .  .  .  .  Name: "users"
+  1778  .  .  .  .  .  .  .  .  .  }
+  1779  .  .  .  .  .  .  .  .  }
+  1780  .  .  .  .  .  .  .  .  Lbrack: api.go:111:11
+  1781  .  .  .  .  .  .  .  .  Index: *ast.SelectorExpr {
+  1782  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1783  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:111:12
+  1784  .  .  .  .  .  .  .  .  .  .  Name: "in"
+  1785  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1442)
+  1786  .  .  .  .  .  .  .  .  .  }
+  1787  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1788  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:111:15
+  1789  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+  1790  .  .  .  .  .  .  .  .  .  }
+  1791  .  .  .  .  .  .  .  .  }
+  1792  .  .  .  .  .  .  .  .  Rbrack: api.go:111:20
+  1793  .  .  .  .  .  .  .  }
+  1794  .  .  .  .  .  .  }
+  1795  .  .  .  .  .  .  TokPos: api.go:111:22
+  1796  .  .  .  .  .  .  Tok: =
+  1797  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+  1798  .  .  .  .  .  .  .  0: *ast.UnaryExpr {
+  1799  .  .  .  .  .  .  .  .  OpPos: api.go:111:24
+  1800  .  .  .  .  .  .  .  .  Op: &
+  1801  .  .  .  .  .  .  .  .  X: *ast.CompositeLit {
+  1802  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+  1803  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:111:25
+  1804  .  .  .  .  .  .  .  .  .  .  Name: "User"
+  1805  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 344)
+  1806  .  .  .  .  .  .  .  .  .  }
+  1807  .  .  .  .  .  .  .  .  .  Lbrace: api.go:111:29
+  1808  .  .  .  .  .  .  .  .  .  Elts: []ast.Expr (len = 4) {
+  1809  .  .  .  .  .  .  .  .  .  .  0: *ast.KeyValueExpr {
+  1810  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+  1811  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:112:3
+  1812  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+  1813  .  .  .  .  .  .  .  .  .  .  .  }
+  1814  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:112:5
+  1815  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.Ident {
+  1816  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:112:13
+  1817  .  .  .  .  .  .  .  .  .  .  .  .  Name: "id"
+  1818  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1728)
+  1819  .  .  .  .  .  .  .  .  .  .  .  }
+  1820  .  .  .  .  .  .  .  .  .  .  }
+  1821  .  .  .  .  .  .  .  .  .  .  1: *ast.KeyValueExpr {
+  1822  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+  1823  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:113:3
+  1824  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+  1825  .  .  .  .  .  .  .  .  .  .  .  }
+  1826  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:113:8
+  1827  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.SelectorExpr {
+  1828  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1829  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:113:13
+  1830  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "in"
+  1831  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1442)
+  1832  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1833  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1834  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:113:16
+  1835  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+  1836  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1837  .  .  .  .  .  .  .  .  .  .  .  }
+  1838  .  .  .  .  .  .  .  .  .  .  }
+  1839  .  .  .  .  .  .  .  .  .  .  2: *ast.KeyValueExpr {
+  1840  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+  1841  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:114:3
+  1842  .  .  .  .  .  .  .  .  .  .  .  .  Name: "FullName"
+  1843  .  .  .  .  .  .  .  .  .  .  .  }
+  1844  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:114:11
+  1845  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.SelectorExpr {
+  1846  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1847  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:114:13
+  1848  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "in"
+  1849  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1442)
+  1850  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1851  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1852  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:114:16
+  1853  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Name"
+  1854  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1855  .  .  .  .  .  .  .  .  .  .  .  }
+  1856  .  .  .  .  .  .  .  .  .  .  }
+  1857  .  .  .  .  .  .  .  .  .  .  3: *ast.KeyValueExpr {
+  1858  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+  1859  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:115:3
+  1860  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Status"
+  1861  .  .  .  .  .  .  .  .  .  .  .  }
+  1862  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:115:9
+  1863  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.IndexExpr {
+  1864  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.SelectorExpr {
+  1865  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1866  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:115:13
+  1867  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "srv"
+  1868  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1386)
+  1869  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1870  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1871  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:115:17
+  1872  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "statuses"
+  1873  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1874  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1875  .  .  .  .  .  .  .  .  .  .  .  .  Lbrack: api.go:115:25
+  1876  .  .  .  .  .  .  .  .  .  .  .  .  Index: *ast.SelectorExpr {
+  1877  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1878  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:115:26
+  1879  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "in"
+  1880  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1442)
+  1881  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1882  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  1883  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:115:29
+  1884  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Status"
+  1885  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1886  .  .  .  .  .  .  .  .  .  .  .  .  }
+  1887  .  .  .  .  .  .  .  .  .  .  .  .  Rbrack: api.go:115:35
+  1888  .  .  .  .  .  .  .  .  .  .  .  }
+  1889  .  .  .  .  .  .  .  .  .  .  }
+  1890  .  .  .  .  .  .  .  .  .  }
+  1891  .  .  .  .  .  .  .  .  .  Rbrace: api.go:116:2
+  1892  .  .  .  .  .  .  .  .  .  Incomplete: false
+  1893  .  .  .  .  .  .  .  .  }
+  1894  .  .  .  .  .  .  .  }
+  1895  .  .  .  .  .  .  }
+  1896  .  .  .  .  .  }
+  1897  .  .  .  .  .  8: *ast.ReturnStmt {
+  1898  .  .  .  .  .  .  Return: api.go:118:2
+  1899  .  .  .  .  .  .  Results: []ast.Expr (len = 2) {
+  1900  .  .  .  .  .  .  .  0: *ast.UnaryExpr {
+  1901  .  .  .  .  .  .  .  .  OpPos: api.go:118:9
+  1902  .  .  .  .  .  .  .  .  Op: &
+  1903  .  .  .  .  .  .  .  .  X: *ast.CompositeLit {
+  1904  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+  1905  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:118:10
+  1906  .  .  .  .  .  .  .  .  .  .  Name: "NewUser"
+  1907  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 962)
+  1908  .  .  .  .  .  .  .  .  .  }
+  1909  .  .  .  .  .  .  .  .  .  Lbrace: api.go:118:17
+  1910  .  .  .  .  .  .  .  .  .  Elts: []ast.Expr (len = 1) {
+  1911  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  1912  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:118:18
+  1913  .  .  .  .  .  .  .  .  .  .  .  Name: "id"
+  1914  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1728)
+  1915  .  .  .  .  .  .  .  .  .  .  }
+  1916  .  .  .  .  .  .  .  .  .  }
+  1917  .  .  .  .  .  .  .  .  .  Rbrace: api.go:118:20
+  1918  .  .  .  .  .  .  .  .  .  Incomplete: false
+  1919  .  .  .  .  .  .  .  .  }
+  1920  .  .  .  .  .  .  .  }
+  1921  .  .  .  .  .  .  .  1: *ast.Ident {
+  1922  .  .  .  .  .  .  .  .  NamePos: api.go:118:23
+  1923  .  .  .  .  .  .  .  .  Name: "nil"
+  1924  .  .  .  .  .  .  .  }
+  1925  .  .  .  .  .  .  }
+  1926  .  .  .  .  .  }
+  1927  .  .  .  .  }
+  1928  .  .  .  .  Rbrace: api.go:119:1
+  1929  .  .  .  }
+  1930  .  .  }
+  1931  .  .  12: *ast.GenDecl {
+  1932  .  .  .  TokPos: api.go:126:1
+  1933  .  .  .  Tok: type
+  1934  .  .  .  Lparen: -
+  1935  .  .  .  Specs: []ast.Spec (len = 1) {
+  1936  .  .  .  .  0: *ast.TypeSpec {
+  1937  .  .  .  .  .  Name: *ast.Ident {
+  1938  .  .  .  .  .  .  NamePos: api.go:126:6
+  1939  .  .  .  .  .  .  Name: "OtherApi"
+  1940  .  .  .  .  .  .  Obj: *ast.Object {
+  1941  .  .  .  .  .  .  .  Kind: type
+  1942  .  .  .  .  .  .  .  Name: "OtherApi"
+  1943  .  .  .  .  .  .  .  Decl: *(obj @ 1936)
+  1944  .  .  .  .  .  .  }
+  1945  .  .  .  .  .  }
+  1946  .  .  .  .  .  Assign: -
+  1947  .  .  .  .  .  Type: *ast.StructType {
+  1948  .  .  .  .  .  .  Struct: api.go:126:15
+  1949  .  .  .  .  .  .  Fields: *ast.FieldList {
+  1950  .  .  .  .  .  .  .  Opening: api.go:126:22
+  1951  .  .  .  .  .  .  .  Closing: api.go:127:1
+  1952  .  .  .  .  .  .  }
+  1953  .  .  .  .  .  .  Incomplete: false
+  1954  .  .  .  .  .  }
+  1955  .  .  .  .  }
+  1956  .  .  .  }
+  1957  .  .  .  Rparen: -
+  1958  .  .  }
+  1959  .  .  13: *ast.FuncDecl {
+  1960  .  .  .  Name: *ast.Ident {
+  1961  .  .  .  .  NamePos: api.go:129:6
+  1962  .  .  .  .  Name: "NewOtherApi"
+  1963  .  .  .  .  Obj: *ast.Object {
+  1964  .  .  .  .  .  Kind: func
+  1965  .  .  .  .  .  Name: "NewOtherApi"
+  1966  .  .  .  .  .  Decl: *(obj @ 1959)
+  1967  .  .  .  .  }
+  1968  .  .  .  }
+  1969  .  .  .  Type: *ast.FuncType {
+  1970  .  .  .  .  Func: api.go:129:1
+  1971  .  .  .  .  Params: *ast.FieldList {
+  1972  .  .  .  .  .  Opening: api.go:129:17
+  1973  .  .  .  .  .  Closing: api.go:129:18
+  1974  .  .  .  .  }
+  1975  .  .  .  .  Results: *ast.FieldList {
+  1976  .  .  .  .  .  Opening: -
+  1977  .  .  .  .  .  List: []*ast.Field (len = 1) {
+  1978  .  .  .  .  .  .  0: *ast.Field {
+  1979  .  .  .  .  .  .  .  Type: *ast.StarExpr {
+  1980  .  .  .  .  .  .  .  .  Star: api.go:129:20
+  1981  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  1982  .  .  .  .  .  .  .  .  .  NamePos: api.go:129:21
+  1983  .  .  .  .  .  .  .  .  .  Name: "OtherApi"
+  1984  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1940)
+  1985  .  .  .  .  .  .  .  .  }
+  1986  .  .  .  .  .  .  .  }
+  1987  .  .  .  .  .  .  }
+  1988  .  .  .  .  .  }
+  1989  .  .  .  .  .  Closing: -
+  1990  .  .  .  .  }
+  1991  .  .  .  }
+  1992  .  .  .  Body: *ast.BlockStmt {
+  1993  .  .  .  .  Lbrace: api.go:129:30
+  1994  .  .  .  .  List: []ast.Stmt (len = 1) {
+  1995  .  .  .  .  .  0: *ast.ReturnStmt {
+  1996  .  .  .  .  .  .  Return: api.go:130:2
+  1997  .  .  .  .  .  .  Results: []ast.Expr (len = 1) {
+  1998  .  .  .  .  .  .  .  0: *ast.UnaryExpr {
+  1999  .  .  .  .  .  .  .  .  OpPos: api.go:130:9
+  2000  .  .  .  .  .  .  .  .  Op: &
+  2001  .  .  .  .  .  .  .  .  X: *ast.CompositeLit {
+  2002  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+  2003  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:130:10
+  2004  .  .  .  .  .  .  .  .  .  .  Name: "OtherApi"
+  2005  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 1940)
+  2006  .  .  .  .  .  .  .  .  .  }
+  2007  .  .  .  .  .  .  .  .  .  Lbrace: api.go:130:18
+  2008  .  .  .  .  .  .  .  .  .  Rbrace: api.go:130:19
+  2009  .  .  .  .  .  .  .  .  .  Incomplete: false
+  2010  .  .  .  .  .  .  .  .  }
+  2011  .  .  .  .  .  .  .  }
+  2012  .  .  .  .  .  .  }
+  2013  .  .  .  .  .  }
+  2014  .  .  .  .  }
+  2015  .  .  .  .  Rbrace: api.go:131:1
+  2016  .  .  .  }
+  2017  .  .  }
+  2018  .  .  14: *ast.GenDecl {
+  2019  .  .  .  TokPos: api.go:133:1
+  2020  .  .  .  Tok: type
+  2021  .  .  .  Lparen: -
+  2022  .  .  .  Specs: []ast.Spec (len = 1) {
+  2023  .  .  .  .  0: *ast.TypeSpec {
+  2024  .  .  .  .  .  Name: *ast.Ident {
+  2025  .  .  .  .  .  .  NamePos: api.go:133:6
+  2026  .  .  .  .  .  .  Name: "OtherCreateParams"
+  2027  .  .  .  .  .  .  Obj: *ast.Object {
+  2028  .  .  .  .  .  .  .  Kind: type
+  2029  .  .  .  .  .  .  .  Name: "OtherCreateParams"
+  2030  .  .  .  .  .  .  .  Decl: *(obj @ 2023)
+  2031  .  .  .  .  .  .  }
+  2032  .  .  .  .  .  }
+  2033  .  .  .  .  .  Assign: -
+  2034  .  .  .  .  .  Type: *ast.StructType {
+  2035  .  .  .  .  .  .  Struct: api.go:133:24
+  2036  .  .  .  .  .  .  Fields: *ast.FieldList {
+  2037  .  .  .  .  .  .  .  Opening: api.go:133:31
+  2038  .  .  .  .  .  .  .  List: []*ast.Field (len = 4) {
+  2039  .  .  .  .  .  .  .  .  0: *ast.Field {
+  2040  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  2041  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  2042  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:134:2
+  2043  .  .  .  .  .  .  .  .  .  .  .  Name: "Username"
+  2044  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  2045  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+  2046  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Username"
+  2047  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 2039)
+  2048  .  .  .  .  .  .  .  .  .  .  .  }
+  2049  .  .  .  .  .  .  .  .  .  .  }
+  2050  .  .  .  .  .  .  .  .  .  }
+  2051  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+  2052  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:134:11
+  2053  .  .  .  .  .  .  .  .  .  .  Name: "string"
+  2054  .  .  .  .  .  .  .  .  .  }
+  2055  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+  2056  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:134:18
+  2057  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+  2058  .  .  .  .  .  .  .  .  .  .  Value: "`apivalidator:\"required,min=3\"`"
+  2059  .  .  .  .  .  .  .  .  .  }
+  2060  .  .  .  .  .  .  .  .  }
+  2061  .  .  .  .  .  .  .  .  1: *ast.Field {
+  2062  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  2063  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  2064  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:135:2
+  2065  .  .  .  .  .  .  .  .  .  .  .  Name: "Name"
+  2066  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  2067  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+  2068  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Name"
+  2069  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 2061)
+  2070  .  .  .  .  .  .  .  .  .  .  .  }
+  2071  .  .  .  .  .  .  .  .  .  .  }
+  2072  .  .  .  .  .  .  .  .  .  }
+  2073  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+  2074  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:135:11
+  2075  .  .  .  .  .  .  .  .  .  .  Name: "string"
+  2076  .  .  .  .  .  .  .  .  .  }
+  2077  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+  2078  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:135:18
+  2079  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+  2080  .  .  .  .  .  .  .  .  .  .  Value: "`apivalidator:\"paramname=account_name\"`"
+  2081  .  .  .  .  .  .  .  .  .  }
+  2082  .  .  .  .  .  .  .  .  }
+  2083  .  .  .  .  .  .  .  .  2: *ast.Field {
+  2084  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  2085  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  2086  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:136:2
+  2087  .  .  .  .  .  .  .  .  .  .  .  Name: "Class"
+  2088  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  2089  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+  2090  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Class"
+  2091  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 2083)
+  2092  .  .  .  .  .  .  .  .  .  .  .  }
+  2093  .  .  .  .  .  .  .  .  .  .  }
+  2094  .  .  .  .  .  .  .  .  .  }
+  2095  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+  2096  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:136:11
+  2097  .  .  .  .  .  .  .  .  .  .  Name: "string"
+  2098  .  .  .  .  .  .  .  .  .  }
+  2099  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+  2100  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:136:18
+  2101  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+  2102  .  .  .  .  .  .  .  .  .  .  Value: "`apivalidator:\"enum=warrior|sorcerer|rouge,default=warrior\"`"
+  2103  .  .  .  .  .  .  .  .  .  }
+  2104  .  .  .  .  .  .  .  .  }
+  2105  .  .  .  .  .  .  .  .  3: *ast.Field {
+  2106  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  2107  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  2108  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:137:2
+  2109  .  .  .  .  .  .  .  .  .  .  .  Name: "Level"
+  2110  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  2111  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+  2112  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Level"
+  2113  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 2105)
+  2114  .  .  .  .  .  .  .  .  .  .  .  }
+  2115  .  .  .  .  .  .  .  .  .  .  }
+  2116  .  .  .  .  .  .  .  .  .  }
+  2117  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+  2118  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:137:11
+  2119  .  .  .  .  .  .  .  .  .  .  Name: "int"
+  2120  .  .  .  .  .  .  .  .  .  }
+  2121  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+  2122  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:137:18
+  2123  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+  2124  .  .  .  .  .  .  .  .  .  .  Value: "`apivalidator:\"min=1,max=50\"`"
+  2125  .  .  .  .  .  .  .  .  .  }
+  2126  .  .  .  .  .  .  .  .  }
+  2127  .  .  .  .  .  .  .  }
+  2128  .  .  .  .  .  .  .  Closing: api.go:138:1
+  2129  .  .  .  .  .  .  }
+  2130  .  .  .  .  .  .  Incomplete: false
+  2131  .  .  .  .  .  }
+  2132  .  .  .  .  }
+  2133  .  .  .  }
+  2134  .  .  .  Rparen: -
+  2135  .  .  }
+  2136  .  .  15: *ast.GenDecl {
+  2137  .  .  .  TokPos: api.go:140:1
+  2138  .  .  .  Tok: type
+  2139  .  .  .  Lparen: -
+  2140  .  .  .  Specs: []ast.Spec (len = 1) {
+  2141  .  .  .  .  0: *ast.TypeSpec {
+  2142  .  .  .  .  .  Name: *ast.Ident {
+  2143  .  .  .  .  .  .  NamePos: api.go:140:6
+  2144  .  .  .  .  .  .  Name: "OtherUser"
+  2145  .  .  .  .  .  .  Obj: *ast.Object {
+  2146  .  .  .  .  .  .  .  Kind: type
+  2147  .  .  .  .  .  .  .  Name: "OtherUser"
+  2148  .  .  .  .  .  .  .  Decl: *(obj @ 2141)
+  2149  .  .  .  .  .  .  }
+  2150  .  .  .  .  .  }
+  2151  .  .  .  .  .  Assign: -
+  2152  .  .  .  .  .  Type: *ast.StructType {
+  2153  .  .  .  .  .  .  Struct: api.go:140:16
+  2154  .  .  .  .  .  .  Fields: *ast.FieldList {
+  2155  .  .  .  .  .  .  .  Opening: api.go:140:23
+  2156  .  .  .  .  .  .  .  List: []*ast.Field (len = 4) {
+  2157  .  .  .  .  .  .  .  .  0: *ast.Field {
+  2158  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  2159  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  2160  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:141:2
+  2161  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+  2162  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  2163  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+  2164  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+  2165  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 2157)
+  2166  .  .  .  .  .  .  .  .  .  .  .  }
+  2167  .  .  .  .  .  .  .  .  .  .  }
+  2168  .  .  .  .  .  .  .  .  .  }
+  2169  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+  2170  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:141:11
+  2171  .  .  .  .  .  .  .  .  .  .  Name: "uint64"
+  2172  .  .  .  .  .  .  .  .  .  }
+  2173  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+  2174  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:141:18
+  2175  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+  2176  .  .  .  .  .  .  .  .  .  .  Value: "`json:\"id\"`"
+  2177  .  .  .  .  .  .  .  .  .  }
+  2178  .  .  .  .  .  .  .  .  }
+  2179  .  .  .  .  .  .  .  .  1: *ast.Field {
+  2180  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  2181  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  2182  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:142:2
+  2183  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+  2184  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  2185  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+  2186  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+  2187  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 2179)
+  2188  .  .  .  .  .  .  .  .  .  .  .  }
+  2189  .  .  .  .  .  .  .  .  .  .  }
+  2190  .  .  .  .  .  .  .  .  .  }
+  2191  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+  2192  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:142:11
+  2193  .  .  .  .  .  .  .  .  .  .  Name: "string"
+  2194  .  .  .  .  .  .  .  .  .  }
+  2195  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+  2196  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:142:18
+  2197  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+  2198  .  .  .  .  .  .  .  .  .  .  Value: "`json:\"login\"`"
+  2199  .  .  .  .  .  .  .  .  .  }
+  2200  .  .  .  .  .  .  .  .  }
+  2201  .  .  .  .  .  .  .  .  2: *ast.Field {
+  2202  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  2203  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  2204  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:143:2
+  2205  .  .  .  .  .  .  .  .  .  .  .  Name: "FullName"
+  2206  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  2207  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+  2208  .  .  .  .  .  .  .  .  .  .  .  .  Name: "FullName"
+  2209  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 2201)
+  2210  .  .  .  .  .  .  .  .  .  .  .  }
+  2211  .  .  .  .  .  .  .  .  .  .  }
+  2212  .  .  .  .  .  .  .  .  .  }
+  2213  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+  2214  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:143:11
+  2215  .  .  .  .  .  .  .  .  .  .  Name: "string"
+  2216  .  .  .  .  .  .  .  .  .  }
+  2217  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+  2218  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:143:18
+  2219  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+  2220  .  .  .  .  .  .  .  .  .  .  Value: "`json:\"full_name\"`"
+  2221  .  .  .  .  .  .  .  .  .  }
+  2222  .  .  .  .  .  .  .  .  }
+  2223  .  .  .  .  .  .  .  .  3: *ast.Field {
+  2224  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  2225  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  2226  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:144:2
+  2227  .  .  .  .  .  .  .  .  .  .  .  Name: "Level"
+  2228  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  2229  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+  2230  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Level"
+  2231  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 2223)
+  2232  .  .  .  .  .  .  .  .  .  .  .  }
+  2233  .  .  .  .  .  .  .  .  .  .  }
+  2234  .  .  .  .  .  .  .  .  .  }
+  2235  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+  2236  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:144:11
+  2237  .  .  .  .  .  .  .  .  .  .  Name: "int"
+  2238  .  .  .  .  .  .  .  .  .  }
+  2239  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+  2240  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:144:18
+  2241  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+  2242  .  .  .  .  .  .  .  .  .  .  Value: "`json:\"level\"`"
+  2243  .  .  .  .  .  .  .  .  .  }
+  2244  .  .  .  .  .  .  .  .  }
+  2245  .  .  .  .  .  .  .  }
+  2246  .  .  .  .  .  .  .  Closing: api.go:145:1
+  2247  .  .  .  .  .  .  }
+  2248  .  .  .  .  .  .  Incomplete: false
+  2249  .  .  .  .  .  }
+  2250  .  .  .  .  }
+  2251  .  .  .  }
+  2252  .  .  .  Rparen: -
+  2253  .  .  }
+  2254  .  .  16: *ast.FuncDecl {
+  2255  .  .  .  Doc: *ast.CommentGroup {
+  2256  .  .  .  .  List: []*ast.Comment (len = 1) {
+  2257  .  .  .  .  .  0: *ast.Comment {
+  2258  .  .  .  .  .  .  Slash: api.go:147:1
+  2259  .  .  .  .  .  .  Text: "// apigen:api {\"url\": \"/user/create\", \"auth\": true, \"method\": \"POST\"}"
+  2260  .  .  .  .  .  }
+  2261  .  .  .  .  }
+  2262  .  .  .  }
+  2263  .  .  .  Recv: *ast.FieldList {
+  2264  .  .  .  .  Opening: api.go:148:6
+  2265  .  .  .  .  List: []*ast.Field (len = 1) {
+  2266  .  .  .  .  .  0: *ast.Field {
+  2267  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  2268  .  .  .  .  .  .  .  0: *ast.Ident {
+  2269  .  .  .  .  .  .  .  .  NamePos: api.go:148:7
+  2270  .  .  .  .  .  .  .  .  Name: "srv"
+  2271  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  2272  .  .  .  .  .  .  .  .  .  Kind: var
+  2273  .  .  .  .  .  .  .  .  .  Name: "srv"
+  2274  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 2266)
+  2275  .  .  .  .  .  .  .  .  }
+  2276  .  .  .  .  .  .  .  }
+  2277  .  .  .  .  .  .  }
+  2278  .  .  .  .  .  .  Type: *ast.StarExpr {
+  2279  .  .  .  .  .  .  .  Star: api.go:148:11
+  2280  .  .  .  .  .  .  .  X: *ast.Ident {
+  2281  .  .  .  .  .  .  .  .  NamePos: api.go:148:12
+  2282  .  .  .  .  .  .  .  .  Name: "OtherApi"
+  2283  .  .  .  .  .  .  .  .  Obj: *(obj @ 1940)
+  2284  .  .  .  .  .  .  .  }
+  2285  .  .  .  .  .  .  }
+  2286  .  .  .  .  .  }
+  2287  .  .  .  .  }
+  2288  .  .  .  .  Closing: api.go:148:20
+  2289  .  .  .  }
+  2290  .  .  .  Name: *ast.Ident {
+  2291  .  .  .  .  NamePos: api.go:148:22
+  2292  .  .  .  .  Name: "Create"
+  2293  .  .  .  }
+  2294  .  .  .  Type: *ast.FuncType {
+  2295  .  .  .  .  Func: api.go:148:1
+  2296  .  .  .  .  Params: *ast.FieldList {
+  2297  .  .  .  .  .  Opening: api.go:148:28
+  2298  .  .  .  .  .  List: []*ast.Field (len = 2) {
+  2299  .  .  .  .  .  .  0: *ast.Field {
+  2300  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  2301  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  2302  .  .  .  .  .  .  .  .  .  NamePos: api.go:148:29
+  2303  .  .  .  .  .  .  .  .  .  Name: "ctx"
+  2304  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  2305  .  .  .  .  .  .  .  .  .  .  Kind: var
+  2306  .  .  .  .  .  .  .  .  .  .  Name: "ctx"
+  2307  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 2299)
+  2308  .  .  .  .  .  .  .  .  .  }
+  2309  .  .  .  .  .  .  .  .  }
+  2310  .  .  .  .  .  .  .  }
+  2311  .  .  .  .  .  .  .  Type: *ast.SelectorExpr {
+  2312  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  2313  .  .  .  .  .  .  .  .  .  NamePos: api.go:148:33
+  2314  .  .  .  .  .  .  .  .  .  Name: "context"
+  2315  .  .  .  .  .  .  .  .  }
+  2316  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  2317  .  .  .  .  .  .  .  .  .  NamePos: api.go:148:41
+  2318  .  .  .  .  .  .  .  .  .  Name: "Context"
+  2319  .  .  .  .  .  .  .  .  }
+  2320  .  .  .  .  .  .  .  }
+  2321  .  .  .  .  .  .  }
+  2322  .  .  .  .  .  .  1: *ast.Field {
+  2323  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+  2324  .  .  .  .  .  .  .  .  0: *ast.Ident {
+  2325  .  .  .  .  .  .  .  .  .  NamePos: api.go:148:50
+  2326  .  .  .  .  .  .  .  .  .  Name: "in"
+  2327  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+  2328  .  .  .  .  .  .  .  .  .  .  Kind: var
+  2329  .  .  .  .  .  .  .  .  .  .  Name: "in"
+  2330  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 2322)
+  2331  .  .  .  .  .  .  .  .  .  }
+  2332  .  .  .  .  .  .  .  .  }
+  2333  .  .  .  .  .  .  .  }
+  2334  .  .  .  .  .  .  .  Type: *ast.Ident {
+  2335  .  .  .  .  .  .  .  .  NamePos: api.go:148:53
+  2336  .  .  .  .  .  .  .  .  Name: "OtherCreateParams"
+  2337  .  .  .  .  .  .  .  .  Obj: *(obj @ 2027)
+  2338  .  .  .  .  .  .  .  }
+  2339  .  .  .  .  .  .  }
+  2340  .  .  .  .  .  }
+  2341  .  .  .  .  .  Closing: api.go:148:70
+  2342  .  .  .  .  }
+  2343  .  .  .  .  Results: *ast.FieldList {
+  2344  .  .  .  .  .  Opening: api.go:148:72
+  2345  .  .  .  .  .  List: []*ast.Field (len = 2) {
+  2346  .  .  .  .  .  .  0: *ast.Field {
+  2347  .  .  .  .  .  .  .  Type: *ast.StarExpr {
+  2348  .  .  .  .  .  .  .  .  Star: api.go:148:73
+  2349  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  2350  .  .  .  .  .  .  .  .  .  NamePos: api.go:148:74
+  2351  .  .  .  .  .  .  .  .  .  Name: "OtherUser"
+  2352  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 2145)
+  2353  .  .  .  .  .  .  .  .  }
+  2354  .  .  .  .  .  .  .  }
+  2355  .  .  .  .  .  .  }
+  2356  .  .  .  .  .  .  1: *ast.Field {
+  2357  .  .  .  .  .  .  .  Type: *ast.Ident {
+  2358  .  .  .  .  .  .  .  .  NamePos: api.go:148:85
+  2359  .  .  .  .  .  .  .  .  Name: "error"
+  2360  .  .  .  .  .  .  .  }
+  2361  .  .  .  .  .  .  }
+  2362  .  .  .  .  .  }
+  2363  .  .  .  .  .  Closing: api.go:148:90
+  2364  .  .  .  .  }
+  2365  .  .  .  }
+  2366  .  .  .  Body: *ast.BlockStmt {
+  2367  .  .  .  .  Lbrace: api.go:148:92
+  2368  .  .  .  .  List: []ast.Stmt (len = 1) {
+  2369  .  .  .  .  .  0: *ast.ReturnStmt {
+  2370  .  .  .  .  .  .  Return: api.go:149:2
+  2371  .  .  .  .  .  .  Results: []ast.Expr (len = 2) {
+  2372  .  .  .  .  .  .  .  0: *ast.UnaryExpr {
+  2373  .  .  .  .  .  .  .  .  OpPos: api.go:149:9
+  2374  .  .  .  .  .  .  .  .  Op: &
+  2375  .  .  .  .  .  .  .  .  X: *ast.CompositeLit {
+  2376  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+  2377  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:149:10
+  2378  .  .  .  .  .  .  .  .  .  .  Name: "OtherUser"
+  2379  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 2145)
+  2380  .  .  .  .  .  .  .  .  .  }
+  2381  .  .  .  .  .  .  .  .  .  Lbrace: api.go:149:19
+  2382  .  .  .  .  .  .  .  .  .  Elts: []ast.Expr (len = 4) {
+  2383  .  .  .  .  .  .  .  .  .  .  0: *ast.KeyValueExpr {
+  2384  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+  2385  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:150:3
+  2386  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+  2387  .  .  .  .  .  .  .  .  .  .  .  }
+  2388  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:150:5
+  2389  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.BasicLit {
+  2390  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: api.go:150:13
+  2391  .  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
+  2392  .  .  .  .  .  .  .  .  .  .  .  .  Value: "12"
+  2393  .  .  .  .  .  .  .  .  .  .  .  }
+  2394  .  .  .  .  .  .  .  .  .  .  }
+  2395  .  .  .  .  .  .  .  .  .  .  1: *ast.KeyValueExpr {
+  2396  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+  2397  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:151:3
+  2398  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+  2399  .  .  .  .  .  .  .  .  .  .  .  }
+  2400  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:151:8
+  2401  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.SelectorExpr {
+  2402  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  2403  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:151:13
+  2404  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "in"
+  2405  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 2327)
+  2406  .  .  .  .  .  .  .  .  .  .  .  .  }
+  2407  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  2408  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:151:16
+  2409  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Username"
+  2410  .  .  .  .  .  .  .  .  .  .  .  .  }
+  2411  .  .  .  .  .  .  .  .  .  .  .  }
+  2412  .  .  .  .  .  .  .  .  .  .  }
+  2413  .  .  .  .  .  .  .  .  .  .  2: *ast.KeyValueExpr {
+  2414  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+  2415  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:152:3
+  2416  .  .  .  .  .  .  .  .  .  .  .  .  Name: "FullName"
+  2417  .  .  .  .  .  .  .  .  .  .  .  }
+  2418  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:152:11
+  2419  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.SelectorExpr {
+  2420  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  2421  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:152:13
+  2422  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "in"
+  2423  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 2327)
+  2424  .  .  .  .  .  .  .  .  .  .  .  .  }
+  2425  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  2426  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:152:16
+  2427  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Name"
+  2428  .  .  .  .  .  .  .  .  .  .  .  .  }
+  2429  .  .  .  .  .  .  .  .  .  .  .  }
+  2430  .  .  .  .  .  .  .  .  .  .  }
+  2431  .  .  .  .  .  .  .  .  .  .  3: *ast.KeyValueExpr {
+  2432  .  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+  2433  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:153:3
+  2434  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Level"
+  2435  .  .  .  .  .  .  .  .  .  .  .  }
+  2436  .  .  .  .  .  .  .  .  .  .  .  Colon: api.go:153:8
+  2437  .  .  .  .  .  .  .  .  .  .  .  Value: *ast.SelectorExpr {
+  2438  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+  2439  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:153:13
+  2440  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "in"
+  2441  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 2327)
+  2442  .  .  .  .  .  .  .  .  .  .  .  .  }
+  2443  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+  2444  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: api.go:153:16
+  2445  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Level"
+  2446  .  .  .  .  .  .  .  .  .  .  .  .  }
+  2447  .  .  .  .  .  .  .  .  .  .  .  }
+  2448  .  .  .  .  .  .  .  .  .  .  }
+  2449  .  .  .  .  .  .  .  .  .  }
+  2450  .  .  .  .  .  .  .  .  .  Rbrace: api.go:154:2
+  2451  .  .  .  .  .  .  .  .  .  Incomplete: false
+  2452  .  .  .  .  .  .  .  .  }
+  2453  .  .  .  .  .  .  .  }
+  2454  .  .  .  .  .  .  .  1: *ast.Ident {
+  2455  .  .  .  .  .  .  .  .  NamePos: api.go:154:5
+  2456  .  .  .  .  .  .  .  .  Name: "nil"
+  2457  .  .  .  .  .  .  .  }
+  2458  .  .  .  .  .  .  }
+  2459  .  .  .  .  .  }
+  2460  .  .  .  .  }
+  2461  .  .  .  .  Rbrace: api.go:155:1
+  2462  .  .  .  }
+  2463  .  .  }
+  2464  .  }
+  2465  .  Scope: *ast.Scope {
+  2466  .  .  Objects: map[string]*ast.Object (len = 14) {
+  2467  .  .  .  "statusUser": *(obj @ 215)
+  2468  .  .  .  "MyApi": *(obj @ 285)
+  2469  .  .  .  "NewUser": *(obj @ 962)
+  2470  .  .  .  "OtherApi": *(obj @ 1940)
+  2471  .  .  .  "OtherUser": *(obj @ 2145)
+  2472  .  .  .  "ApiError": *(obj @ 68)
+  2473  .  .  .  "NewMyApi": *(obj @ 514)
+  2474  .  .  .  "CreateParams": *(obj @ 835)
+  2475  .  .  .  "NewOtherApi": *(obj @ 1963)
+  2476  .  .  .  "OtherCreateParams": *(obj @ 2027)
+  2477  .  .  .  "statusModerator": *(obj @ 236)
+  2478  .  .  .  "statusAdmin": *(obj @ 257)
+  2479  .  .  .  "ProfileParams": *(obj @ 783)
+  2480  .  .  .  "User": *(obj @ 344)
+  2481  .  .  }
+  2482  .  }
+  2483  .  Imports: []*ast.ImportSpec (len = 4) {
+  2484  .  .  0: *(obj @ 12)
+  2485  .  .  1: *(obj @ 20)
+  2486  .  .  2: *(obj @ 28)
+  2487  .  .  3: *(obj @ 36)
+  2488  .  }
+  2489  .  Unresolved: []*ast.Ident (len = 49) {
+  2490  .  .  0: *(obj @ 92)
+  2491  .  .  1: *(obj @ 109)
+  2492  .  .  2: *(obj @ 162)
+  2493  .  .  3: *(obj @ 311)
+  2494  .  .  4: *(obj @ 315)
+  2495  .  .  5: *(obj @ 335)
+  2496  .  .  6: *(obj @ 470)
+  2497  .  .  7: *(obj @ 490)
+  2498  .  .  8: *(obj @ 569)
+  2499  .  .  9: *(obj @ 573)
+  2500  .  .  10: *(obj @ 633)
+  2501  .  .  11: *(obj @ 748)
+  2502  .  .  12: *(obj @ 807)
+  2503  .  .  13: *(obj @ 859)
+  2504  .  .  14: *(obj @ 881)
+  2505  .  .  15: *(obj @ 903)
+  2506  .  .  16: *(obj @ 925)
+  2507  .  .  17: *(obj @ 371)
+  2508  .  .  18: *(obj @ 393)
+  2509  .  .  19: *(obj @ 415)
+  2510  .  .  20: *(obj @ 437)
+  2511  .  .  21: *(obj @ 986)
+  2512  .  .  22: *(obj @ 1063)
+  2513  .  .  23: *(obj @ 1108)
+  2514  .  .  24: *(obj @ 1148)
+  2515  .  .  25: *(obj @ 1154)
+  2516  .  .  26: *(obj @ 1297)
+  2517  .  .  27: *(obj @ 1310)
+  2518  .  .  28: *(obj @ 1321)
+  2519  .  .  29: *(obj @ 1359)
+  2520  .  .  30: *(obj @ 1427)
+  2521  .  .  31: *(obj @ 1472)
+  2522  .  .  32: *(obj @ 1512)
+  2523  .  .  33: *(obj @ 1518)
+  2524  .  .  34: *(obj @ 1658)
+  2525  .  .  35: *(obj @ 1671)
+  2526  .  .  36: *(obj @ 1682)
+  2527  .  .  37: *(obj @ 1921)
+  2528  .  .  38: *(obj @ 2051)
+  2529  .  .  39: *(obj @ 2073)
+  2530  .  .  40: *(obj @ 2095)
+  2531  .  .  41: *(obj @ 2117)
+  2532  .  .  42: *(obj @ 2169)
+  2533  .  .  43: *(obj @ 2191)
+  2534  .  .  44: *(obj @ 2213)
+  2535  .  .  45: *(obj @ 2235)
+  2536  .  .  46: *(obj @ 2312)
+  2537  .  .  47: *(obj @ 2357)
+  2538  .  .  48: *(obj @ 2454)
+  2539  .  }
+  2540  .  Comments: []*ast.CommentGroup (len = 6) {
+  2541  .  .  0: *(obj @ 48)
+  2542  .  .  1: *ast.CommentGroup {
+  2543  .  .  .  List: []*ast.Comment (len = 1) {
+  2544  .  .  .  .  0: *ast.Comment {
+  2545  .  .  .  .  .  Slash: api.go:21:1
+  2546  .  .  .  .  .  Text: "// ----------------"
+  2547  .  .  .  .  }
+  2548  .  .  .  }
+  2549  .  .  }
+  2550  .  .  2: *(obj @ 1006)
+  2551  .  .  3: *(obj @ 1370)
+  2552  .  .  4: *ast.CommentGroup {
+  2553  .  .  .  List: []*ast.Comment (len = 4) {
+  2554  .  .  .  .  0: *ast.Comment {
+  2555  .  .  .  .  .  Slash: api.go:121:1
+  2556  .  .  .  .  .  Text: "// 2-я часть"
+  2557  .  .  .  .  }
+  2558  .  .  .  .  1: *ast.Comment {
+  2559  .  .  .  .  .  Slash: api.go:122:1
+  2560  .  .  .  .  .  Text: "// это похожая структура, с теми же методами, но у них другие параметры!"
+  2561  .  .  .  .  }
+  2562  .  .  .  .  2: *ast.Comment {
+  2563  .  .  .  .  .  Slash: api.go:123:1
+  2564  .  .  .  .  .  Text: "// код, созданный вашим кодогенератором работает с конкретной струткурой, про другие ничего не знает"
+  2565  .  .  .  .  }
+  2566  .  .  .  .  3: *ast.Comment {
+  2567  .  .  .  .  .  Slash: api.go:124:1
+  2568  .  .  .  .  .  Text: "// поэтому то что рядом есть ещё походая структура с такими же методами его нисколько не смущает"
+  2569  .  .  .  .  }
+  2570  .  .  .  }
+  2571  .  .  }
+  2572  .  .  5: *(obj @ 2255)
+  2573  .  }
+  2574  }

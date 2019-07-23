@@ -1,0 +1,561 @@
+     0  *ast.File {
+     1  .  Doc: *ast.CommentGroup {
+     2  .  .  List: []*ast.Comment (len = 1) {
+     3  .  .  .  0: *ast.Comment {
+     4  .  .  .  .  Slash: pack/unpack.go:1:1
+     5  .  .  .  .  Text: "// go build gen/* && ./codegen.exe pack/packer.go  pack/marshaller.go"
+     6  .  .  .  }
+     7  .  .  }
+     8  .  }
+     9  .  Package: pack/unpack.go:2:1
+    10  .  Name: *ast.Ident {
+    11  .  .  NamePos: pack/unpack.go:2:9
+    12  .  .  Name: "main"
+    13  .  }
+    14  .  Decls: []ast.Decl (len = 5) {
+    15  .  .  0: *ast.GenDecl {
+    16  .  .  .  TokPos: pack/unpack.go:4:1
+    17  .  .  .  Tok: import
+    18  .  .  .  Lparen: -
+    19  .  .  .  Specs: []ast.Spec (len = 1) {
+    20  .  .  .  .  0: *ast.ImportSpec {
+    21  .  .  .  .  .  Path: *ast.BasicLit {
+    22  .  .  .  .  .  .  ValuePos: pack/unpack.go:4:8
+    23  .  .  .  .  .  .  Kind: STRING
+    24  .  .  .  .  .  .  Value: "\"fmt\""
+    25  .  .  .  .  .  }
+    26  .  .  .  .  .  EndPos: -
+    27  .  .  .  .  }
+    28  .  .  .  }
+    29  .  .  .  Rparen: -
+    30  .  .  }
+    31  .  .  1: *ast.GenDecl {
+    32  .  .  .  Doc: *ast.CommentGroup {
+    33  .  .  .  .  List: []*ast.Comment (len = 2) {
+    34  .  .  .  .  .  0: *ast.Comment {
+    35  .  .  .  .  .  .  Slash: pack/unpack.go:6:1
+    36  .  .  .  .  .  .  Text: "// lets generate code for this struct"
+    37  .  .  .  .  .  }
+    38  .  .  .  .  .  1: *ast.Comment {
+    39  .  .  .  .  .  .  Slash: pack/unpack.go:7:1
+    40  .  .  .  .  .  .  Text: "// cgen: binpack"
+    41  .  .  .  .  .  }
+    42  .  .  .  .  }
+    43  .  .  .  }
+    44  .  .  .  TokPos: pack/unpack.go:8:1
+    45  .  .  .  Tok: type
+    46  .  .  .  Lparen: -
+    47  .  .  .  Specs: []ast.Spec (len = 1) {
+    48  .  .  .  .  0: *ast.TypeSpec {
+    49  .  .  .  .  .  Name: *ast.Ident {
+    50  .  .  .  .  .  .  NamePos: pack/unpack.go:8:6
+    51  .  .  .  .  .  .  Name: "User"
+    52  .  .  .  .  .  .  Obj: *ast.Object {
+    53  .  .  .  .  .  .  .  Kind: type
+    54  .  .  .  .  .  .  .  Name: "User"
+    55  .  .  .  .  .  .  .  Decl: *(obj @ 48)
+    56  .  .  .  .  .  .  }
+    57  .  .  .  .  .  }
+    58  .  .  .  .  .  Assign: -
+    59  .  .  .  .  .  Type: *ast.StructType {
+    60  .  .  .  .  .  .  Struct: pack/unpack.go:8:11
+    61  .  .  .  .  .  .  Fields: *ast.FieldList {
+    62  .  .  .  .  .  .  .  Opening: pack/unpack.go:8:18
+    63  .  .  .  .  .  .  .  List: []*ast.Field (len = 4) {
+    64  .  .  .  .  .  .  .  .  0: *ast.Field {
+    65  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+    66  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+    67  .  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:9:2
+    68  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+    69  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+    70  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+    71  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+    72  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 64)
+    73  .  .  .  .  .  .  .  .  .  .  .  }
+    74  .  .  .  .  .  .  .  .  .  .  }
+    75  .  .  .  .  .  .  .  .  .  }
+    76  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+    77  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:9:11
+    78  .  .  .  .  .  .  .  .  .  .  Name: "int"
+    79  .  .  .  .  .  .  .  .  .  }
+    80  .  .  .  .  .  .  .  .  }
+    81  .  .  .  .  .  .  .  .  1: *ast.Field {
+    82  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+    83  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+    84  .  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:10:2
+    85  .  .  .  .  .  .  .  .  .  .  .  Name: "RealName"
+    86  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+    87  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+    88  .  .  .  .  .  .  .  .  .  .  .  .  Name: "RealName"
+    89  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 81)
+    90  .  .  .  .  .  .  .  .  .  .  .  }
+    91  .  .  .  .  .  .  .  .  .  .  }
+    92  .  .  .  .  .  .  .  .  .  }
+    93  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+    94  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:10:11
+    95  .  .  .  .  .  .  .  .  .  .  Name: "string"
+    96  .  .  .  .  .  .  .  .  .  }
+    97  .  .  .  .  .  .  .  .  .  Tag: *ast.BasicLit {
+    98  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:10:18
+    99  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   100  .  .  .  .  .  .  .  .  .  .  Value: "`cgen:\"-\"`"
+   101  .  .  .  .  .  .  .  .  .  }
+   102  .  .  .  .  .  .  .  .  }
+   103  .  .  .  .  .  .  .  .  2: *ast.Field {
+   104  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   105  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   106  .  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:11:2
+   107  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+   108  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   109  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   110  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Login"
+   111  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 103)
+   112  .  .  .  .  .  .  .  .  .  .  .  }
+   113  .  .  .  .  .  .  .  .  .  .  }
+   114  .  .  .  .  .  .  .  .  .  }
+   115  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   116  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:11:11
+   117  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   118  .  .  .  .  .  .  .  .  .  }
+   119  .  .  .  .  .  .  .  .  }
+   120  .  .  .  .  .  .  .  .  3: *ast.Field {
+   121  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   122  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   123  .  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:12:2
+   124  .  .  .  .  .  .  .  .  .  .  .  Name: "Flags"
+   125  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   126  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   127  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Flags"
+   128  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 120)
+   129  .  .  .  .  .  .  .  .  .  .  .  }
+   130  .  .  .  .  .  .  .  .  .  .  }
+   131  .  .  .  .  .  .  .  .  .  }
+   132  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   133  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:12:11
+   134  .  .  .  .  .  .  .  .  .  .  Name: "int"
+   135  .  .  .  .  .  .  .  .  .  }
+   136  .  .  .  .  .  .  .  .  }
+   137  .  .  .  .  .  .  .  }
+   138  .  .  .  .  .  .  .  Closing: pack/unpack.go:13:1
+   139  .  .  .  .  .  .  }
+   140  .  .  .  .  .  .  Incomplete: false
+   141  .  .  .  .  .  }
+   142  .  .  .  .  }
+   143  .  .  .  }
+   144  .  .  .  Rparen: -
+   145  .  .  }
+   146  .  .  2: *ast.GenDecl {
+   147  .  .  .  TokPos: pack/unpack.go:15:1
+   148  .  .  .  Tok: type
+   149  .  .  .  Lparen: -
+   150  .  .  .  Specs: []ast.Spec (len = 1) {
+   151  .  .  .  .  0: *ast.TypeSpec {
+   152  .  .  .  .  .  Name: *ast.Ident {
+   153  .  .  .  .  .  .  NamePos: pack/unpack.go:15:6
+   154  .  .  .  .  .  .  Name: "Avatar"
+   155  .  .  .  .  .  .  Obj: *ast.Object {
+   156  .  .  .  .  .  .  .  Kind: type
+   157  .  .  .  .  .  .  .  Name: "Avatar"
+   158  .  .  .  .  .  .  .  Decl: *(obj @ 151)
+   159  .  .  .  .  .  .  }
+   160  .  .  .  .  .  }
+   161  .  .  .  .  .  Assign: -
+   162  .  .  .  .  .  Type: *ast.StructType {
+   163  .  .  .  .  .  .  Struct: pack/unpack.go:15:13
+   164  .  .  .  .  .  .  Fields: *ast.FieldList {
+   165  .  .  .  .  .  .  .  Opening: pack/unpack.go:15:20
+   166  .  .  .  .  .  .  .  List: []*ast.Field (len = 2) {
+   167  .  .  .  .  .  .  .  .  0: *ast.Field {
+   168  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   169  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   170  .  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:16:2
+   171  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+   172  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   173  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   174  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ID"
+   175  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 167)
+   176  .  .  .  .  .  .  .  .  .  .  .  }
+   177  .  .  .  .  .  .  .  .  .  .  }
+   178  .  .  .  .  .  .  .  .  .  }
+   179  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   180  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:16:6
+   181  .  .  .  .  .  .  .  .  .  .  Name: "int"
+   182  .  .  .  .  .  .  .  .  .  }
+   183  .  .  .  .  .  .  .  .  }
+   184  .  .  .  .  .  .  .  .  1: *ast.Field {
+   185  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   186  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   187  .  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:17:2
+   188  .  .  .  .  .  .  .  .  .  .  .  Name: "Url"
+   189  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   190  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   191  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Url"
+   192  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 184)
+   193  .  .  .  .  .  .  .  .  .  .  .  }
+   194  .  .  .  .  .  .  .  .  .  .  }
+   195  .  .  .  .  .  .  .  .  .  }
+   196  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   197  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:17:6
+   198  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   199  .  .  .  .  .  .  .  .  .  }
+   200  .  .  .  .  .  .  .  .  }
+   201  .  .  .  .  .  .  .  }
+   202  .  .  .  .  .  .  .  Closing: pack/unpack.go:18:1
+   203  .  .  .  .  .  .  }
+   204  .  .  .  .  .  .  Incomplete: false
+   205  .  .  .  .  .  }
+   206  .  .  .  .  }
+   207  .  .  .  }
+   208  .  .  .  Rparen: -
+   209  .  .  }
+   210  .  .  3: *ast.GenDecl {
+   211  .  .  .  TokPos: pack/unpack.go:20:1
+   212  .  .  .  Tok: var
+   213  .  .  .  Lparen: -
+   214  .  .  .  Specs: []ast.Spec (len = 1) {
+   215  .  .  .  .  0: *ast.ValueSpec {
+   216  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   217  .  .  .  .  .  .  0: *ast.Ident {
+   218  .  .  .  .  .  .  .  NamePos: pack/unpack.go:20:5
+   219  .  .  .  .  .  .  .  Name: "test"
+   220  .  .  .  .  .  .  .  Obj: *ast.Object {
+   221  .  .  .  .  .  .  .  .  Kind: var
+   222  .  .  .  .  .  .  .  .  Name: "test"
+   223  .  .  .  .  .  .  .  .  Decl: *(obj @ 215)
+   224  .  .  .  .  .  .  .  .  Data: 0
+   225  .  .  .  .  .  .  .  }
+   226  .  .  .  .  .  .  }
+   227  .  .  .  .  .  }
+   228  .  .  .  .  .  Values: []ast.Expr (len = 1) {
+   229  .  .  .  .  .  .  0: *ast.BasicLit {
+   230  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:20:12
+   231  .  .  .  .  .  .  .  Kind: INT
+   232  .  .  .  .  .  .  .  Value: "42"
+   233  .  .  .  .  .  .  }
+   234  .  .  .  .  .  }
+   235  .  .  .  .  }
+   236  .  .  .  }
+   237  .  .  .  Rparen: -
+   238  .  .  }
+   239  .  .  4: *ast.FuncDecl {
+   240  .  .  .  Name: *ast.Ident {
+   241  .  .  .  .  NamePos: pack/unpack.go:22:6
+   242  .  .  .  .  Name: "main"
+   243  .  .  .  .  Obj: *ast.Object {
+   244  .  .  .  .  .  Kind: func
+   245  .  .  .  .  .  Name: "main"
+   246  .  .  .  .  .  Decl: *(obj @ 239)
+   247  .  .  .  .  }
+   248  .  .  .  }
+   249  .  .  .  Type: *ast.FuncType {
+   250  .  .  .  .  Func: pack/unpack.go:22:1
+   251  .  .  .  .  Params: *ast.FieldList {
+   252  .  .  .  .  .  Opening: pack/unpack.go:22:10
+   253  .  .  .  .  .  Closing: pack/unpack.go:22:11
+   254  .  .  .  .  }
+   255  .  .  .  }
+   256  .  .  .  Body: *ast.BlockStmt {
+   257  .  .  .  .  Lbrace: pack/unpack.go:22:13
+   258  .  .  .  .  List: []ast.Stmt (len = 5) {
+   259  .  .  .  .  .  0: *ast.AssignStmt {
+   260  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+   261  .  .  .  .  .  .  .  0: *ast.Ident {
+   262  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:27:2
+   263  .  .  .  .  .  .  .  .  Name: "data"
+   264  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   265  .  .  .  .  .  .  .  .  .  Kind: var
+   266  .  .  .  .  .  .  .  .  .  Name: "data"
+   267  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 259)
+   268  .  .  .  .  .  .  .  .  }
+   269  .  .  .  .  .  .  .  }
+   270  .  .  .  .  .  .  }
+   271  .  .  .  .  .  .  TokPos: pack/unpack.go:27:7
+   272  .  .  .  .  .  .  Tok: :=
+   273  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   274  .  .  .  .  .  .  .  0: *ast.CompositeLit {
+   275  .  .  .  .  .  .  .  .  Type: *ast.ArrayType {
+   276  .  .  .  .  .  .  .  .  .  Lbrack: pack/unpack.go:27:10
+   277  .  .  .  .  .  .  .  .  .  Elt: *ast.Ident {
+   278  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:27:12
+   279  .  .  .  .  .  .  .  .  .  .  Name: "byte"
+   280  .  .  .  .  .  .  .  .  .  }
+   281  .  .  .  .  .  .  .  .  }
+   282  .  .  .  .  .  .  .  .  Lbrace: pack/unpack.go:27:16
+   283  .  .  .  .  .  .  .  .  Elts: []ast.Expr (len = 21) {
+   284  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   285  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:28:3
+   286  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   287  .  .  .  .  .  .  .  .  .  .  Value: "128"
+   288  .  .  .  .  .  .  .  .  .  }
+   289  .  .  .  .  .  .  .  .  .  1: *ast.BasicLit {
+   290  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:28:8
+   291  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   292  .  .  .  .  .  .  .  .  .  .  Value: "36"
+   293  .  .  .  .  .  .  .  .  .  }
+   294  .  .  .  .  .  .  .  .  .  2: *ast.BasicLit {
+   295  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:28:12
+   296  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   297  .  .  .  .  .  .  .  .  .  .  Value: "17"
+   298  .  .  .  .  .  .  .  .  .  }
+   299  .  .  .  .  .  .  .  .  .  3: *ast.BasicLit {
+   300  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:28:16
+   301  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   302  .  .  .  .  .  .  .  .  .  .  Value: "0"
+   303  .  .  .  .  .  .  .  .  .  }
+   304  .  .  .  .  .  .  .  .  .  4: *ast.BasicLit {
+   305  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:30:3
+   306  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   307  .  .  .  .  .  .  .  .  .  .  Value: "9"
+   308  .  .  .  .  .  .  .  .  .  }
+   309  .  .  .  .  .  .  .  .  .  5: *ast.BasicLit {
+   310  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:30:6
+   311  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   312  .  .  .  .  .  .  .  .  .  .  Value: "0"
+   313  .  .  .  .  .  .  .  .  .  }
+   314  .  .  .  .  .  .  .  .  .  6: *ast.BasicLit {
+   315  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:30:9
+   316  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   317  .  .  .  .  .  .  .  .  .  .  Value: "0"
+   318  .  .  .  .  .  .  .  .  .  }
+   319  .  .  .  .  .  .  .  .  .  7: *ast.BasicLit {
+   320  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:30:12
+   321  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   322  .  .  .  .  .  .  .  .  .  .  Value: "0"
+   323  .  .  .  .  .  .  .  .  .  }
+   324  .  .  .  .  .  .  .  .  .  8: *ast.BasicLit {
+   325  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:31:3
+   326  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   327  .  .  .  .  .  .  .  .  .  .  Value: "118"
+   328  .  .  .  .  .  .  .  .  .  }
+   329  .  .  .  .  .  .  .  .  .  9: *ast.BasicLit {
+   330  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:31:8
+   331  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   332  .  .  .  .  .  .  .  .  .  .  Value: "46"
+   333  .  .  .  .  .  .  .  .  .  }
+   334  .  .  .  .  .  .  .  .  .  10: *ast.BasicLit {
+   335  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:31:12
+   336  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   337  .  .  .  .  .  .  .  .  .  .  Value: "114"
+   338  .  .  .  .  .  .  .  .  .  }
+   339  .  .  .  .  .  .  .  .  .  11: *ast.BasicLit {
+   340  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:31:17
+   341  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   342  .  .  .  .  .  .  .  .  .  .  Value: "111"
+   343  .  .  .  .  .  .  .  .  .  }
+   344  .  .  .  .  .  .  .  .  .  12: *ast.BasicLit {
+   345  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:31:22
+   346  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   347  .  .  .  .  .  .  .  .  .  .  Value: "109"
+   348  .  .  .  .  .  .  .  .  .  }
+   349  .  .  .  .  .  .  .  .  .  13: *ast.BasicLit {
+   350  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:31:27
+   351  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   352  .  .  .  .  .  .  .  .  .  .  Value: "97"
+   353  .  .  .  .  .  .  .  .  .  }
+   354  .  .  .  .  .  .  .  .  .  14: *ast.BasicLit {
+   355  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:31:31
+   356  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   357  .  .  .  .  .  .  .  .  .  .  Value: "110"
+   358  .  .  .  .  .  .  .  .  .  }
+   359  .  .  .  .  .  .  .  .  .  15: *ast.BasicLit {
+   360  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:31:36
+   361  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   362  .  .  .  .  .  .  .  .  .  .  Value: "111"
+   363  .  .  .  .  .  .  .  .  .  }
+   364  .  .  .  .  .  .  .  .  .  16: *ast.BasicLit {
+   365  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:31:41
+   366  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   367  .  .  .  .  .  .  .  .  .  .  Value: "118"
+   368  .  .  .  .  .  .  .  .  .  }
+   369  .  .  .  .  .  .  .  .  .  17: *ast.BasicLit {
+   370  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:33:3
+   371  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   372  .  .  .  .  .  .  .  .  .  .  Value: "16"
+   373  .  .  .  .  .  .  .  .  .  }
+   374  .  .  .  .  .  .  .  .  .  18: *ast.BasicLit {
+   375  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:33:7
+   376  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   377  .  .  .  .  .  .  .  .  .  .  Value: "0"
+   378  .  .  .  .  .  .  .  .  .  }
+   379  .  .  .  .  .  .  .  .  .  19: *ast.BasicLit {
+   380  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:33:10
+   381  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   382  .  .  .  .  .  .  .  .  .  .  Value: "0"
+   383  .  .  .  .  .  .  .  .  .  }
+   384  .  .  .  .  .  .  .  .  .  20: *ast.BasicLit {
+   385  .  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:33:13
+   386  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   387  .  .  .  .  .  .  .  .  .  .  Value: "0"
+   388  .  .  .  .  .  .  .  .  .  }
+   389  .  .  .  .  .  .  .  .  }
+   390  .  .  .  .  .  .  .  .  Rbrace: pack/unpack.go:34:2
+   391  .  .  .  .  .  .  .  .  Incomplete: false
+   392  .  .  .  .  .  .  .  }
+   393  .  .  .  .  .  .  }
+   394  .  .  .  .  .  }
+   395  .  .  .  .  .  1: *ast.ExprStmt {
+   396  .  .  .  .  .  .  X: *ast.CallExpr {
+   397  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   398  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   399  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:35:2
+   400  .  .  .  .  .  .  .  .  .  Name: "fmt"
+   401  .  .  .  .  .  .  .  .  }
+   402  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   403  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:35:6
+   404  .  .  .  .  .  .  .  .  .  Name: "Println"
+   405  .  .  .  .  .  .  .  .  }
+   406  .  .  .  .  .  .  .  }
+   407  .  .  .  .  .  .  .  Lparen: pack/unpack.go:35:13
+   408  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   409  .  .  .  .  .  .  .  .  0: *ast.CallExpr {
+   410  .  .  .  .  .  .  .  .  .  Fun: *ast.Ident {
+   411  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:35:14
+   412  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   413  .  .  .  .  .  .  .  .  .  }
+   414  .  .  .  .  .  .  .  .  .  Lparen: pack/unpack.go:35:20
+   415  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   416  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   417  .  .  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:35:21
+   418  .  .  .  .  .  .  .  .  .  .  .  Name: "data"
+   419  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 264)
+   420  .  .  .  .  .  .  .  .  .  .  }
+   421  .  .  .  .  .  .  .  .  .  }
+   422  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   423  .  .  .  .  .  .  .  .  .  Rparen: pack/unpack.go:35:25
+   424  .  .  .  .  .  .  .  .  }
+   425  .  .  .  .  .  .  .  }
+   426  .  .  .  .  .  .  .  Ellipsis: -
+   427  .  .  .  .  .  .  .  Rparen: pack/unpack.go:35:26
+   428  .  .  .  .  .  .  }
+   429  .  .  .  .  .  }
+   430  .  .  .  .  .  2: *ast.AssignStmt {
+   431  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+   432  .  .  .  .  .  .  .  0: *ast.Ident {
+   433  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:36:2
+   434  .  .  .  .  .  .  .  .  Name: "u"
+   435  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   436  .  .  .  .  .  .  .  .  .  Kind: var
+   437  .  .  .  .  .  .  .  .  .  Name: "u"
+   438  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 430)
+   439  .  .  .  .  .  .  .  .  }
+   440  .  .  .  .  .  .  .  }
+   441  .  .  .  .  .  .  }
+   442  .  .  .  .  .  .  TokPos: pack/unpack.go:36:4
+   443  .  .  .  .  .  .  Tok: :=
+   444  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   445  .  .  .  .  .  .  .  0: *ast.CompositeLit {
+   446  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   447  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:36:7
+   448  .  .  .  .  .  .  .  .  .  Name: "User"
+   449  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 52)
+   450  .  .  .  .  .  .  .  .  }
+   451  .  .  .  .  .  .  .  .  Lbrace: pack/unpack.go:36:11
+   452  .  .  .  .  .  .  .  .  Rbrace: pack/unpack.go:36:12
+   453  .  .  .  .  .  .  .  .  Incomplete: false
+   454  .  .  .  .  .  .  .  }
+   455  .  .  .  .  .  .  }
+   456  .  .  .  .  .  }
+   457  .  .  .  .  .  3: *ast.ExprStmt {
+   458  .  .  .  .  .  .  X: *ast.CallExpr {
+   459  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   460  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   461  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:37:2
+   462  .  .  .  .  .  .  .  .  .  Name: "u"
+   463  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 435)
+   464  .  .  .  .  .  .  .  .  }
+   465  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   466  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:37:4
+   467  .  .  .  .  .  .  .  .  .  Name: "Unpack"
+   468  .  .  .  .  .  .  .  .  }
+   469  .  .  .  .  .  .  .  }
+   470  .  .  .  .  .  .  .  Lparen: pack/unpack.go:37:10
+   471  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   472  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   473  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:37:11
+   474  .  .  .  .  .  .  .  .  .  Name: "data"
+   475  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 264)
+   476  .  .  .  .  .  .  .  .  }
+   477  .  .  .  .  .  .  .  }
+   478  .  .  .  .  .  .  .  Ellipsis: -
+   479  .  .  .  .  .  .  .  Rparen: pack/unpack.go:37:15
+   480  .  .  .  .  .  .  }
+   481  .  .  .  .  .  }
+   482  .  .  .  .  .  4: *ast.ExprStmt {
+   483  .  .  .  .  .  .  X: *ast.CallExpr {
+   484  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   485  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   486  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:38:2
+   487  .  .  .  .  .  .  .  .  .  Name: "fmt"
+   488  .  .  .  .  .  .  .  .  }
+   489  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   490  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:38:6
+   491  .  .  .  .  .  .  .  .  .  Name: "Printf"
+   492  .  .  .  .  .  .  .  .  }
+   493  .  .  .  .  .  .  .  }
+   494  .  .  .  .  .  .  .  Lparen: pack/unpack.go:38:12
+   495  .  .  .  .  .  .  .  Args: []ast.Expr (len = 2) {
+   496  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   497  .  .  .  .  .  .  .  .  .  ValuePos: pack/unpack.go:38:13
+   498  .  .  .  .  .  .  .  .  .  Kind: STRING
+   499  .  .  .  .  .  .  .  .  .  Value: "\"Unpacked user %#v\""
+   500  .  .  .  .  .  .  .  .  }
+   501  .  .  .  .  .  .  .  .  1: *ast.Ident {
+   502  .  .  .  .  .  .  .  .  .  NamePos: pack/unpack.go:38:34
+   503  .  .  .  .  .  .  .  .  .  Name: "u"
+   504  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 435)
+   505  .  .  .  .  .  .  .  .  }
+   506  .  .  .  .  .  .  .  }
+   507  .  .  .  .  .  .  .  Ellipsis: -
+   508  .  .  .  .  .  .  .  Rparen: pack/unpack.go:38:35
+   509  .  .  .  .  .  .  }
+   510  .  .  .  .  .  }
+   511  .  .  .  .  }
+   512  .  .  .  .  Rbrace: pack/unpack.go:39:1
+   513  .  .  .  }
+   514  .  .  }
+   515  .  }
+   516  .  Scope: *ast.Scope {
+   517  .  .  Objects: map[string]*ast.Object (len = 4) {
+   518  .  .  .  "User": *(obj @ 52)
+   519  .  .  .  "Avatar": *(obj @ 155)
+   520  .  .  .  "test": *(obj @ 220)
+   521  .  .  .  "main": *(obj @ 243)
+   522  .  .  }
+   523  .  }
+   524  .  Imports: []*ast.ImportSpec (len = 1) {
+   525  .  .  0: *(obj @ 20)
+   526  .  }
+   527  .  Unresolved: []*ast.Ident (len = 10) {
+   528  .  .  0: *(obj @ 76)
+   529  .  .  1: *(obj @ 93)
+   530  .  .  2: *(obj @ 115)
+   531  .  .  3: *(obj @ 132)
+   532  .  .  4: *(obj @ 179)
+   533  .  .  5: *(obj @ 196)
+   534  .  .  6: *(obj @ 277)
+   535  .  .  7: *(obj @ 398)
+   536  .  .  8: *(obj @ 410)
+   537  .  .  9: *(obj @ 485)
+   538  .  }
+   539  .  Comments: []*ast.CommentGroup (len = 3) {
+   540  .  .  0: *(obj @ 1)
+   541  .  .  1: *(obj @ 32)
+   542  .  .  2: *ast.CommentGroup {
+   543  .  .  .  List: []*ast.Comment (len = 1) {
+   544  .  .  .  .  0: *ast.Comment {
+   545  .  .  .  .  .  Slash: pack/unpack.go:23:2
+   546  .  .  .  .  .  Text: "/*\n\t\tperl -E '$b = pack(\"L L/a* L\", 1_123_456, \"v.romanov\", 16);\n\t\t\tprint map { ord.\", \"  } split(\"\", $b); '\n\t*/"
+   547  .  .  .  .  }
+   548  .  .  .  }
+   549  .  .  }
+   550  .  }
+   551  }
+SKIP *ast.ImportSpec is not ast.TypeSpec
+process struct User
+	generating Unpack method
+	generating code for field User.ID
+	generating code for field User.Login
+	generating code for field User.Flags
+SKIP struct "Avatar" doesnt have comments
+SKIP *ast.ValueSpec is not ast.TypeSpec
+SKIP *ast.FuncDecl is not *ast.GenDecl
